@@ -38,8 +38,8 @@
 					    					</nav>
 										</div>
 										<div class="small-12 medium-4 cell">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/site-logo.png" class="footer-logo">
-											Site Address
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-footer.svg" class="footer-logo">
+											<p>Site Address</p>
 										</div>
 									</div>
 

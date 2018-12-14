@@ -14,5 +14,6 @@
 		<?php dynamic_sidebar( 'offcanvas' ); ?>
 
 	<?php endif; ?>
-
+	<br><br><br><br>
+<button class="menu-icon" type="button" data-toggle="off-canvas"></button>
 </div>
