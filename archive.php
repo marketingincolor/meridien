@@ -7,11 +7,11 @@
 
 get_header(); ?>
 			
-	<div class="content">
+	<div class="content grid-container archive-content">
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
+		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
 			    
 		    	<header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>
@@ -35,7 +35,7 @@ get_header(); ?>
 		
 			</main> <!-- end #main -->
 	
-			<?php get_sidebar(); ?>
+			<?php //get_sidebar(); ?>
 	    
 	    </div> <!-- end #inner-content -->
 	    

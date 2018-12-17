@@ -4,15 +4,30 @@
  */
 ?>
 
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 	<header class="article-header">	
-		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-		<?php get_template_part( 'parts/content', 'byline' ); ?>
+		<?php if(is_singular('case_studies') ){ $ptype = get_post_type_object('case_studies'); ?>
+		<h1 class="header-text xentry-title xsingle-title" itemprop="headline"><?php echo $ptype->labels->name; ?>:</h1>
+		<?php } ?>
+		<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
+
+		<?php if(is_singular('case_studies') ){ ?>
+			<div class="grid-x grid-padding-x small-up-2 medium-up-4">
+				<div class="cell"><h5>Goal: <?php the_field('enrollment_goal'); ?></h5></div>
+				<div class="cell"><h5>Actual: <?php the_field('actually_enrolled'); ?></h5></div>
+				<div class="cell"><h5>Random: <?php the_field('randomized'); ?>%</h5></div>
+				<div class="cell"><h5>Retention: <?php the_field('retention_rate'); ?>%</h5></div>
+			</div>
+		<?php } ?>
+
+
+		<?php //get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->
 					
     <section class="entry-content" itemprop="text">
-		<?php the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 						
@@ -21,6 +36,6 @@
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	
 	</footer> <!-- end article footer -->
 						
-	<?php comments_template(); ?>	
+	<?php //comments_template(); ?>	
 													
 </article> <!-- end article -->

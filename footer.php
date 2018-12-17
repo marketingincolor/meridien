@@ -21,19 +21,16 @@
 									<div class="grid-x grid-margin-x">
 										<div class="small-12 medium-auto cell">
 											<nav role="navigation">
-												About
 					    						<?php joints_footer_links(); ?>
 					    					</nav>
 										</div>
 										<div class="small-12 medium-auto cell">
 											<nav role="navigation">
-												Patients
 					    						<?php joints_footer_links_two(); ?>
 					    					</nav>
 										</div>
 										<div class="small-12 medium-auto cell">
 											<nav role="navigation">
-												Services
 					    						<?php joints_footer_links_three(); ?>
 					    					</nav>
 										</div>

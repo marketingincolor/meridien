@@ -359,7 +359,7 @@ MERIDIEN SITE CUSTOMIZATIONS
 /*
 Montserrat font weights: 200-Extra-light, 300-light, 400-Regular, 500-Medium, 600-Semi-Bold, 700-Bold
  */
-
+body { color:#48484d; }
 body, h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-weight:600; }
 a { color:inherit; }
@@ -374,6 +374,7 @@ a:focus, a:hover { color:inherit; }
 .dk-orange-bgnd { background-color:#d95221; }
 .header-text { color:#75757d; }
 .text { color:#48484d; }
+.entry-title, .single-title { color:#1f49a5; }
 
 .orange-button, .orange-button:hover, .orange-button:visited, .orange-button:active {
   background-color:transparent;
@@ -421,23 +422,44 @@ a:focus, a:hover { color:inherit; }
 .header { color:#fff; }
 .top-bar { background:transparent; padding:3em .5em; }
 .top-bar ul { background:transparent; }
-.top-bar li { text-transform:uppercase; font-size:12px; font-weight:700; letter-spacing:1px; }
 .top-bar .header-logo { width:160px; }
-.menu .active >a { background:transparent; color:#fff; }
 
+/* NAVIGATION AND MENUS */
+.home #main-nav { text-align:center; }
+.home #main-nav li, .top-bar li { text-transform:uppercase; font-size:12px; font-weight:700; letter-spacing:1px; }
+.menu .active >a { background:transparent; color:#fff; }
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after { border-color:#ff7340 transparent transparent; }
+.dropdown.menu .is-active>a { color:#fff; }
+.is-dropdown-submenu { background-color:#1f49a5 !important; border:none; }
 .page-hero {
-  height: auto;
-  padding: 15% 0%;
+  height: 30em;
+  /*padding: 15% 0%;*/
   background-size: cover;
   background-repeat: no-repeat; 
 }
+.single-hero {
+  height: 20em;
+  /*padding: 15% 0%;*/
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: top center;
+}
+.home #site-header {
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: top center;
+}
 .sticky-container { background-color:#1f49a5; }
+
 /* CONTAINERS */
 .grid-container { max-width:64em; }
+.page-content, .archive-content { margin-top:90px; }
 .patient-router { padding:3em 0em; }
 .studies-section { color:#fff; padding:3em 0em; }
 .testimonial-section { padding:3em 0em; }
 .orbit-next, .orbit-previous { z-index:1; }
+.orbit-slide { width:90%; margin:auto; }
 /* FOOTER */
 .footer { margin-top:0em; }
 .upper-footer-bg {
@@ -462,12 +484,13 @@ a:focus, a:hover { color:inherit; }
 
 /* 0 - 640 px */
 @media only screen {
-
+  .page-hero, .single-hero { max-height: 10em; }
 }
 
 /* 640 - 1024 px */
 @media only screen and (min-width: 40.063em){
-
+  .page-hero { max-height: 30em; }
+  .single-hero { max-height: 20em; }
 }
 /* 1024 - 1440 px */
 @media only screen and (min-width: 63.063em){

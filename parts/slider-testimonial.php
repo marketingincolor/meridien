@@ -11,8 +11,11 @@
 
 			<div class="orbit" aria-label="Volunteer Testimonials" data-orbit data-timer-delay="8000">
 				<ul class="orbit-container">
-					<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
-					<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+<!-- 					<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button> -->
+					<button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span><i class="fal fa-chevron-left orange"></i></button>
+					<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span><i class="fal fa-chevron-right orange"></i></button>
+
 					<li class="orbit-slide is-active" data-slide="0">
 						<div class="single-orbit-slide">
 						<h3 class="text-center">Volunteer Testimonials One</h3>
