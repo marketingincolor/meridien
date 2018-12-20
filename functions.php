@@ -63,3 +63,20 @@ $classes[] = $post->post_type . '-' . $post->post_name;
 return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+
+// ADD SITE OPTIONS VIA ACF
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
+
+/**
+ * Display Posts Shortcode, add custom class to EVERY item
+ *
+ */
+function be_dps_post_type_class( $classes ) {
+  $classes[] = 'cell';
+  return $classes;
+}
+add_filter( 'display_posts_shortcode_post_class', 'be_dps_post_type_class' );

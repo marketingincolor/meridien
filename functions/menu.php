@@ -11,11 +11,12 @@ register_nav_menus(
 // The Top Menu
 function joints_top_nav() {
 	$menu_classes = is_front_page() ? 'medium-horizontal align-center menu' : 'medium-horizontal menu';
+	$search_link = '<img src="' . get_template_directory_uri() . '/assets/images/meridien-search-icon.svg" class="search-icon">';
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
 		'menu_class'		=> $menu_classes,	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s'.$search_link.'</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)

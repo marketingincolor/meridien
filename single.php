@@ -19,7 +19,7 @@ get_header(); ?>
 		</div>
 	</section>
 <?php } ?>
-<div class="content grid-container page-content">
+<div class="content grid-container page-content page-content-margin">
 	<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		<main class="main small-12 medium-10 medium-offset-1 cell" role="main">
 		
@@ -35,12 +35,25 @@ get_header(); ?>
 </div> <!-- end #content -->
 
 <?php if( is_single() && has_term( 'patient', 'category' ) ) { ?> 
-	<div class="cta-section" style="background-color:orange;">
+	<div class="cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-12 large-12 cell">
 			    	<h3>Patient CTA</h3>
 			    	<p>Patient Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				</div> 
+			</div> 
+		</div> 
+	</div>
+<?php } ?>
+
+<?php if( is_single() && has_term( 'sponsor-cro', 'category' ) ) { ?> 
+	<div class="cta-section orange-bgnd">
+		<div class="content grid-container">
+			<div class="inner-content grid-x grid-margin-x grid-padding-x">
+			    <div class="small-12 medium-12 large-12 cell">
+			    	<h3>Sponsor CTA</h3>
+			    	<p>Sponsor Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 				</div> 
 			</div> 
 		</div> 

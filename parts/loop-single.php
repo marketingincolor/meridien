@@ -23,6 +23,17 @@
 			</div>
 		<?php } ?>
 
+		<?php if(is_singular('studies') ) { 
+			$age_range = get_field('age_range');
+			$location_object = get_field('location');
+			$location = $location_object->post_title;
+			$indication = get_field('indication'); ?>
+			<div class="grid-x grid-padding-x small-up-3">
+				<div class="cell"><h5 class="no-mar">Location:</h5><h5><?php echo $location; ?></h5></div>
+				<div class="cell"><h5 class="no-mar">Indication:</h5><h5><?php the_field('indication'); ?></h5></div>
+				<div class="cell"><h5 class="no-mar">Age Range:</h5><h5><?php the_field('age_range'); ?></h5></div>
+			</div>
+		<?php } ?>
 
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->

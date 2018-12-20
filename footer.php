@@ -36,7 +36,13 @@
 										</div>
 										<div class="small-12 medium-4 cell">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-footer.svg" class="footer-logo">
-											<p>Site Address</p>
+											<h6 class="no-mar">Meridien Research Corporate</h6>
+											<h6 class="no-mar">501 S. Boulevard</h6>
+											<h6>Tampa, FL 33060</h6>
+											<p>
+												<a href='<?php the_field('facebook_link', 'option'); ?>'><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo"></a>
+												<a href='<?php the_field('twitter_link', 'option'); ?>'><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg" class="social-logo"></a>
+											</p>
 										</div>
 									</div>
 
@@ -71,8 +77,6 @@
 						</div>
 
 					</div>
-
-
 
 
 

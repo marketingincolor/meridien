@@ -359,23 +359,37 @@ MERIDIEN SITE CUSTOMIZATIONS
 /*
 Montserrat font weights: 200-Extra-light, 300-light, 400-Regular, 500-Medium, 600-Semi-Bold, 700-Bold
  */
-body { color:#48484d; }
+body { color:#48484d; font-weight:500; }
 body, h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-weight:600; }
+h1, h2, h3, h4, h5, h6 { font-weight:700; color:#75757d; }
 a { color:inherit; }
 a:focus, a:hover { color:inherit; }
+.no-mar { margin:0; }
 
 /* COLORS */
 .blue { color:#1f49a5; }
+.alt-blue { color:#2e78e5; }
 .orange { color:#ff7340; }
 .dk-orange { color:#d95221; }
+.header-text { color:#75757d; }
+.text { color:#48484d; }
 .blue-bgnd { background-color:#1f49a5; }
 .orange-bgnd { background-color:#ff7340; }
 .dk-orange-bgnd { background-color:#d95221; }
-.header-text { color:#75757d; }
-.text { color:#48484d; }
-.entry-title, .single-title { color:#1f49a5; }
 
+/* SIZINGS AND SPACINGS */
+.regular-font { font-weight:400; }
+.medium-font { font-weight:500; }
+.semi-font { font-weight:600; }
+.bold-font { font-weight:700; }
+.entry-title, .single-title { font-size:36px; line-height:1.2; }/* H2 for SINGLE templates */
+.page-lead { font-size:36px; }
+.page-content { font-size:18px; }
+.page-content .entry-content { font-size:18px; font-weight:500; }
+.key-space { padding:90px 0px; }
+.key-space h2 { line-height:1.1; }
+
+/* BUTTONS AND ICONS */
 .orange-button, .orange-button:hover, .orange-button:visited, .orange-button:active {
   background-color:transparent;
   border:4px solid #ff7340;
@@ -419,10 +433,30 @@ a:focus, a:hover { color:inherit; }
 }
 
 /* HEADER */
-.header { color:#fff; }
-.top-bar { background:transparent; padding:3em .5em; }
+.header, .header h2 { color:#fff; }
+.top-bar { background:transparent; }
 .top-bar ul { background:transparent; }
 .top-bar .header-logo { width:160px; }
+.top-bar-left.nav-logo, .top-bar-right.nav-drop { width:49% !important; flex:inherit !important; }
+.top-bar-right.nav-drop .menu {  float:right; }
+.top-bar-right.nav-drop .menu li { display:inline-block; }
+.menu-icon:after, .menu-icon:hover:after { 
+  background:#ff7340;
+  box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340;
+  -webkit-box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340; 
+}
+.front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg');}
+.search-icon { height:24px; width:24px; margin:6px 12px; }
+
+.patient-router:before { 
+  content:'';
+  bottom: auto;
+  left: 50%;
+  position: absolute;
+  height: 10%;
+  min-height: 120px;
+  border:1.5px solid #b4b4bf;
+}
 
 /* NAVIGATION AND MENUS */
 .home #main-nav { text-align:center; }
@@ -431,6 +465,9 @@ a:focus, a:hover { color:inherit; }
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after { border-color:#ff7340 transparent transparent; }
 .dropdown.menu .is-active>a { color:#fff; }
 .is-dropdown-submenu { background-color:#1f49a5 !important; border:none; }
+.sticky-container { background-color:#1f49a5; }
+
+/* BACKGROUND POSITIONINGS */
 .page-hero {
   height: 30em;
   /*padding: 15% 0%;*/
@@ -450,16 +487,39 @@ a:focus, a:hover { color:inherit; }
   background-repeat: no-repeat; 
   background-position: top center;
 }
-.sticky-container { background-color:#1f49a5; }
+.casestudies-section {}
+.blog-section, .cta-section, .studies-section, .benefits-section, .services-section { 
+  background-size:cover; 
+  background-repeat:no-repeat; 
+  background-position:top left; 
+  padding:90px 0px; 
+}
 
 /* CONTAINERS */
 .grid-container { max-width:64em; }
-.page-content, .archive-content { margin-top:90px; }
+.page-content-margin, .archive-content-margin { margin-top:90px; }
 .patient-router { padding:3em 0em; }
 .studies-section { color:#fff; padding:3em 0em; }
+.services-section { color:#fff; padding:3em 0em; }
+.casestudies-section { padding:3em 0em; }
 .testimonial-section { padding:3em 0em; }
-.orbit-next, .orbit-previous { z-index:1; }
-.orbit-slide { width:90%; margin:auto; }
+.benefits-section { color:#fff; padding:3em 0em; }
+
+.cta-section, .cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, .benefits-section h3, .studies-section h3, .services-section h3 { color:#fff; }
+
+.services-section ul { list-style:none; display:inline-block; }
+
+
+
+.display-posts-listing .listing-item { display:inline-grid; text-align: center; }
+.display-posts-listing .listing-item .image img { min-height:120px; border-radius:10px; }
+.display-posts-listing .listing-item .title { font-weight:700; line-height:1.4; padding:0.75em 0em; }
+
+
+
+
+
+
 /* FOOTER */
 .footer { margin-top:0em; }
 .upper-footer-bg {
@@ -479,22 +539,46 @@ a:focus, a:hover { color:inherit; }
 .lower-footer-bg .inner-footer { padding:2.25em 0em; }
 
 /* For ORBIT FUNCTIONS */
-
+.orbit-slide { width:90%; margin:auto; }
+.orbit-next, .orbit-previous { z-index:1; font-size:2em; }
+.orbit-next:active, .orbit-next:focus, .orbit-next:hover, .orbit-previous:active, .orbit-previous:focus, .orbit-previous:hover { background-color:transparent; }
 
 
 /* 0 - 640 px */
 @media only screen {
+  .front-page-header { background-image:url('../images/mrg-img-hdr-hero-mob.jpg'); }
+  .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
+  .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
+  .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
+  .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
+  .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
+  .top-bar { padding:.5em; }
   .page-hero, .single-hero { max-height: 10em; }
+  .key-space { padding:30px 0px; }
 }
 
 /* 640 - 1024 px */
 @media only screen and (min-width: 40.063em){
+  .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg'); }
+  .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
+  .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
+  .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
+  .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
+  .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
+  .top-bar { padding:3em .5em; }
   .page-hero { max-height: 30em; }
   .single-hero { max-height: 20em; }
+  .key-space { padding:90px 0px; }
 }
 /* 1024 - 1440 px */
 @media only screen and (min-width: 63.063em){
-
+  .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg'); }
+  .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
+  .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
+  .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
+  .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
+  .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
+  .key-space { padding:90px 0px; }
 }
 /* 1440 - 1920 px */
 @media only screen and (min-width: 90.063em){
