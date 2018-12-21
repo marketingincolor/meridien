@@ -17,6 +17,8 @@ if ($post_type == 'studies' ) {
 	<header class="article-header">
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>
+
+		<?php if ($post_type == 'studies' ) { ?>
 		<div class="grid-x grid-margin-x grid-padding-x">
 			<div class="small-4 cell">
 				<h6 class="no-mar">Location:</h6>
@@ -31,6 +33,8 @@ if ($post_type == 'studies' ) {
 				<h6><?php echo $age_range; ?></h6>
 			</div>
 		</div>
+		<?php } ?>
+
 	</header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="text">

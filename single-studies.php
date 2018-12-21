@@ -35,31 +35,23 @@ get_header(); ?>
 	</div> <!-- end #inner-content -->
 </div> <!-- end #content -->
 
-<?php if( is_single() && has_term( 'patient', 'category' ) ) { ?> 
-	<div class="cta-section orange-bgnd">
-		<div class="content grid-container">
-			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-12 large-12 cell">
-			    	<h3>Patient CTA</h3>
-			    	<p>Patient Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-				</div> 
+<?php if( is_single() ) { ?> 
+<div class="patient-form cta-section orange-bgnd">
+	<div class="content grid-container page-content">
+		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		    <div class="small-12 medium-10 medium-offset-1 text-center cell">
+		    	<h3>Interested in partcipating in this study?</h3>
+		    	<p>Please complete this Patient Form.</p>
+		    </div>
+		    <div class="small-12 medium-8 medium-offset-2 text-center cell">	
+		    	<?php echo do_shortcode('[ninja_form id=1]'); ?>
 			</div> 
 		</div> 
-	</div>
+	</div> 
+</div>
 <?php } ?>
 
-<?php if( is_single() && has_term( 'sponsor-cro', 'category' ) ) { ?> 
-	<div class="cta-section orange-bgnd">
-		<div class="content grid-container">
-			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-12 large-12 cell">
-			    	<h3>Sponsor CTA</h3>
-			    	<p>Sponsor Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-				</div> 
-			</div> 
-		</div> 
-	</div>
-<?php } ?>
+
 
 
 <?php get_footer(); ?>

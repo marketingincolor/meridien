@@ -55,7 +55,7 @@ foreach($posts_array as $key => $value){
 
 		<div class="inner-content grid-x grid-margin-x grid-padding-x align-center">
 		    <div class="small-8 text-center cell">
-				<a href="<?php echo site_url(); ?>/case-studies" class="orange-button">Read Our Case Studies</a>
+				<a href="<?php echo site_url(); ?>/case-studies" class="orange-button" style="margin-top:2em;">Read Our Case Studies</a>
 			</div>
 		</div>
 

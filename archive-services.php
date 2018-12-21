@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays STAFF archive page
+ * Displays archive pages if a specific template is not set. 
  *
  * For more info: https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -11,7 +11,7 @@ get_header(); ?>
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		
-		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
+		    <main class="main small-12 medium-12 cell" role="main">
 			    
 		    	<!-- <header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>
@@ -21,7 +21,7 @@ get_header(); ?>
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive-grid' ); ?>
+					<?php get_template_part( 'parts/loop', 'archive' ); ?>
 				    
 				<?php endwhile; ?>	
 

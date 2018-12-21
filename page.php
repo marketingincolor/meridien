@@ -21,8 +21,8 @@ get_header(); ?>
 		</div>
 	</section>
 <?php } ?>
-
 	<div class="content grid-container page-content page-content-margin">
+		<?php //if (function_exists('wordpress_breadcrumbs')) wordpress_breadcrumbs(); ?>
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
 				
@@ -64,7 +64,7 @@ get_header(); ?>
 			    <div class="small-12 medium-7 cell">
 			    	<h3>Our studies etiam porta sem malesuada magna mollis.</h3>
 			    	<p>Nenean lacinia bibendum null asd consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis consectetuer adipiscing elit.</p>
-			    	<a href="" class="orange-white-button">Visit All Our Active Studies</a>
+			    	<a href="./studies" class="orange-white-button">Visit All Our Active Studies</a>
 					<?php //get_template_part( 'parts/active', 'studies' ); ?>
 				</div> 
 			</div> 
@@ -77,9 +77,9 @@ get_header(); ?>
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-7 cell">
-			    	<h3>What are the Benefits of Volunteering for a Study?</h3>
+			    	<h3 style="margin-bottom:1em;">What are the Benefits of Volunteering for a Study?</h3>
 			    	<p>Volunteers in reasearch studies participate in the development of medical therapies that may offer better treatments and even cures for life-threatening and chronic diseases. Possible benefits for volunteers:</p>
-			    	<ul>
+			    	<ul style="margin-bottom:2em;">
 			    		<li>Play an active rolve in their health care.</li>
 			    		<li>Gain access to research treatments before they are widely available.</li>
 			    		<li>Obtain medical care at health care facilities during the trial.</li>
@@ -111,9 +111,9 @@ get_header(); ?>
 			    	<h3>Our Latest Blog Posts</h3>
 			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
-					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="small"]'); ?>
+					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/patient" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/patients/patient-blog" class="orange-button">View All Blog Posts</a>
 
 				</div> 
 			</div> 
@@ -124,8 +124,8 @@ get_header(); ?>
 		<div class="content grid-container page-content">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
-			    	<h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris?</h3>
-			    	<p>Patient Form lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+			    	<h3>Interested in partcipating in a study?</h3>
+			    	<p>Please complete this Patient Form.</p>
 			    </div>
 			    <div class="small-12 medium-8 medium-offset-2 text-center cell">	
 			    	<?php echo do_shortcode('[ninja_form id=1]'); ?>
@@ -143,17 +143,27 @@ get_header(); ?>
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
 			    	<h3>Our Services</h3>
 			    	<p>With six dedicated research sites strategically located throughout central Florida, Meridien Research can help get you to your recruitment goals.</p>
-			    	<p>Meridien Research investigators are board certified and specialists in:
+			    	<p>Meridien Research investigators are board certified and specialists in:</p>
+			    	<div class="grid-x">
+			    		<div class="small-6 cell">
 						<ul>
 							<li>Endocrinology</li>
 							<li>Mental Health</li>
 							<li>Dermatology</li>
 							<li>Internal Medicine</li>
+						</ul>
+						</div>
+						<div class="small-6 cell">
+						<ul>
 							<li>Cardiology</li>
 							<li>CNS</li>
 							<li>Men’s & Women’s Health</li>
 						</ul>
-					</p>
+						</div>
+					</div>
+					
+
+
 				</div> 
 			</div> 
 		</div> 
@@ -168,41 +178,37 @@ get_header(); ?>
 			    	<h3>Our Latest Blog Posts</h3>
 			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
 
-					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="small"]'); ?>
+					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/sponsor-cro" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/sponsors/cro-blog" class="orange-button">View All Blog Posts</a>
 
 				</div> 
 			</div> 
 		</div> 
 	</div>
-
 
 <?php } ?>
 
 <?php if( is_page( 'about' ) ) { ?> 
-	<div class="callout-section">
-		<div class="content grid-container">
-			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-12 large-12 cell">
-			    	<h3>2000 Clinical Trials and Counting</h3>
-			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-				</div> 
-			</div> 
+	<div class="trials-section">
+		<div class="content grid-container page-content">
+			<div class="inner-content grid-x">
+			    <div class="small-12 medium-10 medium-offset-1 cell">
+					<?php the_field('trials_content'); ?>
+				</div>
+			</div>
 		</div> 
 	</div>
 
 	<div class="excellence-section">
-		<div class="content grid-container">
-			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-12 large-12 cell">
-			    	<h3>Commitment to Excellence</h3>
-			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-				</div> 
-			</div> 
+		<div class="content grid-container page-content">
+			<div class="inner-content grid-x">
+			    <div class="small-12 medium-10 medium-offset-1 cell">
+					<?php the_field('commitment_content'); ?>
+				</div>
+			</div>
 		</div> 
 	</div>
 <?php } ?>
-
 
 <?php get_footer(); ?>
