@@ -26,26 +26,26 @@ foreach($posts_array as $key => $value){
 			</div> 
 		</div> 
 
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-		    <div class="small-3 text-center cell">
+		<div class="inner-content grid-x grid-margin-x grid-padding-x study-row">
+		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-enroll.svg" class="study-logo">
 		    	<p class="no-mar">Enrollment Goal:</p>
 		    	<h5 class="alt-blue">250</h5>
 			</div> 
 
-		    <div class="small-3 text-center cell">
+		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-actual.svg" class="study-logo">
 		    	<p class="no-mar">Actually Enrolled:</p>
 		    	<h5 class="alt-blue">60</h5>
 			</div>
 
-		    <div class="small-3 text-center cell">
+		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-random.svg" class="study-logo">
 		    	<p class="no-mar">Randomized:</p>
 		    	<h5 class="alt-blue">240%</h5>
 			</div>
 
-		    <div class="small-3 text-center cell">
+		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-retention.svg" class="study-logo">
 		    	<p class="no-mar">Retention Rate:</p>
 		    	<h5 class="alt-blue">93%</h5>

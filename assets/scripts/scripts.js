@@ -10,3 +10,12 @@ jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function(){i
 /*
 Insert Custom JS Below
 */
+jQuery(window).scroll(function() {
+	var scroll = jQuery(window).scrollTop();
+    if (scroll >= 50) {
+        jQuery(".top-bar").addClass("min-padding-header");
+    }
+    if (scroll < 50) {
+        jQuery(".top-bar").removeClass("min-padding-header");
+    }
+});

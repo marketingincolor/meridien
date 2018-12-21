@@ -363,7 +363,8 @@ body { color:#48484d; font-weight:500; }
 body, h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-weight:700; color:#75757d; }
 a { color:inherit; }
-a:focus, a:hover { color:inherit; }
+a:focus { color:inherit; }
+a:hover { color:#d95221; }
 .no-mar { margin:0; }
 
 /* COLORS */
@@ -437,10 +438,13 @@ a:focus, a:hover { color:inherit; }
 
 /* HEADER */
 .header, .header h2 { color:#fff; }
+.header-cta, .header-cta h2 { color:#fff; }
 .top-bar { background:transparent; }
+.top-bar { padding:3em .5em; }
+.min-padding-header { padding:1em .5em; }
 .top-bar ul { background:transparent; }
 .top-bar .header-logo { width:160px; }
-.home .header .header-logo { max-width:80%; margin-bottom:45px; }
+.home .header .header-logo { max-width:80%; /*margin-bottom:45px;*/ }
 .top-bar-left.nav-logo, .top-bar-right.nav-drop { width:49% !important; flex:inherit !important; }
 .top-bar-right.nav-drop .menu {  float:right; }
 .top-bar-right.nav-drop .menu li { display:inline-block; }
@@ -462,7 +466,15 @@ a:focus, a:hover { color:inherit; }
   border:1.5px solid #b4b4bf;
 }
 
+.patient-router-alt .cta-mobile { padding:2em; display:inline-flex; }
+.patient-router-alt .cta-mobile img { margin-right:2em; }
+.patient-router-alt .cta-mobile .white-button { margin:auto; font-size:16px; font-weight:500; padding:1.25em .5em; }
+
 /* NAVIGATION AND MENUS */
+.off-canvas { background:#f0f0ff; }
+.off-canvas.position-right { width:100%; }
+.off-canvas .menu .active > a { color:inherit; }
+.position-right.is-transition-push { box-shadow:none; -webkit-box-shadow:none;  }
 .home #main-nav { text-align:center; }
 .home #main-nav li, .top-bar li { text-transform:uppercase; font-size:12px; font-weight:700; letter-spacing:1px; }
 .menu .active >a { background:transparent; color:#fff; }
@@ -485,13 +497,16 @@ a:focus, a:hover { color:inherit; }
   background-repeat: no-repeat; 
   background-position: top center;
 }
-.home #site-header {
+.home .header-cta {
   height: auto;
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: top center;
 }
+.home .header-cta .header-logo { max-width:80%; margin-bottom:45px; }
+
 .casestudies-section {}
+.casestudies-section .study-row { margin-top:.5em; }
 .blog-section, .cta-section, .studies-section, .benefits-section, .services-section, .trials-section { 
   background-size:cover; 
   background-repeat:no-repeat; 
@@ -554,7 +569,8 @@ a:focus, a:hover { color:inherit; }
   color:#fff; 
   font-weight:500;
 }
-.lower-footer-bg a, .lower-footer-bg a:hover { color:#fff; }
+.lower-footer-bg a { color:#fff; }
+.lower-footer-bg a:hover { color:#d95221; }
 .lower-footer-bg .inner-footer p { margin-bottom:0; }
 .lower-footer-bg .inner-footer { padding:2.25em 0em; }
 .inner-footer .footer-logo { max-width:80%; margin-bottom:1em; }
@@ -574,12 +590,17 @@ a:focus, a:hover { color:inherit; }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
   .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
-  .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
+  .studies-section { text-align:center; background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
-  .top-bar { padding:.5em; }
+  .top-bar { padding:.5em .5em; } 
   .page-hero, .single-hero { max-height: 10em; }
   .key-space { padding:30px 0px; }
+  .patient-router:before {  border:none; }
+  .page-content-margin, .archive-content-margin, .trials-section { margin-top:3em; margin-bottom:3em; }
+  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:3em 0em; }
+  .inner-footer { text-align:center; }
+  .terms, .privacy, .copyright { font-size:12px; font-weight:300; text-align:center; }
 }
 
 /* 640 - 1024 px */
@@ -588,13 +609,19 @@ a:focus, a:hover { color:inherit; }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
   .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
-  .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
+  .studies-section { text-align:inherit; background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .top-bar { padding:3em .5em; }
+  .min-padding-header { padding:1em .5em; }
   .page-hero { max-height: 30em; }
   .single-hero { max-height: 20em; }
   .key-space { padding:90px 0px; }
+  .patient-router:before {  border:1.5px solid #b4b4bf; }
+  .page-content-margin, .archive-content-margin, .trials-section { margin-top:6em; margin-bottom:6em; }
+  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:6em 0em; }
+  .inner-footer { text-align:inherit; }
+  .terms, .privacy, .copyright { font-size:inherit; font-weight:inherit; text-align:inherit; }
 }
 /* 1024 - 1440 px */
 @media only screen and (min-width: 63.063em){

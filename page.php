@@ -8,6 +8,50 @@ $page_hero_meta = '&nbsp;';
 $page_hero_image = get_the_post_thumbnail_url($post->ID, 'full');
 get_header(); ?>
 
+<?php if( is_front_page() ) { ?> 
+<!-- 	<section class="page-hero" style="">
+	<div class="grid-container">
+		
+		<div class="grid-x">
+			<div class="small-10 small-offset-1 medium-8 medium-offset-1 cell">
+				<h4><?php echo $page_hero_meta; ?>INSERT SPECIAL HOME PAGE BLUE HEADER HERE</h4>
+			</div>
+		</div>
+
+	</div>
+</section> -->
+
+<div class="front-page-header header-cta">
+	<div class="content grid-container" style="padding-top:45px;">
+		<div class="grid-x grid-padding-x align-center show-for-medium">
+			<div class="cell medium-4 text-center">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo">
+			</div>
+		</div>
+		<div class="grid-x grid-padding-x align-center">
+			<div class="cell show-for-medium">
+				<?php joints_top_nav(); ?>	
+			</div>
+		</div>
+		<div class="grid-x grid-padding-x align-center">
+			<div class="cell small-10 medium-8 text-center key-space">
+				<h2><?php the_field('hero_title'); ?></h2>
+				<p><?php the_field('hero_caption'); ?></p>
+			</div>
+		</div>
+		<div class="grid-x grid-padding-x align-center">
+			<div class="cell small-4 text-center">
+				<p class="orange show-for-medium no-mar">Scroll To Learn More</p>
+				<p class="orange" style="margin-bottom:2em;"><a href="#top-ref"><i class="far fa-chevron-circle-down"></i></a></p>
+			</div>
+		</div>
+		<?php //echo $post->ID; ?>
+	</div>
+</div>
+
+<?php } ?>
+
+
 <?php if( !is_front_page() && $page_hero_image !='' ) { ?> 
 	<section class="page-hero" style="background-image: url(<?php echo $page_hero_image; ?>);">
 		<div class="grid-container">
@@ -38,19 +82,26 @@ get_header(); ?>
 	<div class="content grid-container">
 		<div class="row patient-router grid-x grid-margin-x grid-padding-x text-center">
 			<div class="show-for-medium medium-6 cell has-bar">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon.svg" class="footer-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon.svg" class="cta-icon">
 				<h4 class="header-text">Patient/Volunteer Homepage</h4>
 				<a href="<?php echo site_url(); ?>/patients" class="orange-button">Visit</a>
 			</div>
 			<div class="show-for-medium medium-6 cell">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-sponsor-icon.svg" class="footer-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-sponsor-icon.svg" class="cta-icon">
 				<h4 class="header-text">Sponsor/CRO Homepage</h4>
 				<a href="<?php echo site_url(); ?>/sponsors" class="orange-button">Visit</a>
 			</div>
-			<div class="show-for-small-only cell dk-orange-bgnd">
-				<a href="<?php echo site_url(); ?>/patients" class="white-button">Visit Patient/Volunteer Homepage</a>
+		</div> 
+	</div> 
+
+	<div class="content">
+		<div class="row patient-router-alt grid-x text-center">
+			<div class="show-for-small-only cell dk-orange-bgnd cta-mobile">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon-mobile.svg" class="cta-icon">
+				<a href="<?php echo site_url(); ?>/patients" class="white-button">Visit Patient Homepage</a>
 			</div>
-			<div class="show-for-small-only cell orange-bgnd">
+			<div class="show-for-small-only cell orange-bgnd cta-mobile">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-sponsor-icon-mobile.svg" class="cta-icon">
 				<a href="<?php echo site_url(); ?>/sponsors" class="white-button">Visit Sponsor/CRO Homepage</a>
 			</div>
 		</div> 

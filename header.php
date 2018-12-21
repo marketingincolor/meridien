@@ -30,23 +30,17 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<div class="off-canvas-wrapper" <?php if( ! is_front_page() ){ echo 'data-sticky-container'; } ?> >
+		<div class="off-canvas-wrapper" data-sticky-container>
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
-			<div class="off-canvas-content" <?php if( ! is_front_page() ){ echo 'data-off-canvas-content'; } ?> >
+			<div class="off-canvas-content" data-off-canvas-content>
 				
-				<header class="header blue-bgnd<?php if( is_front_page() ){ echo ' front-page-header'; } ?>" role="banner" id="site-header" <?php if( !is_front_page() ){ echo 'data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1"'; } /*elseif ( is_front_page() ){ echo 'style="background-image: url('. get_template_directory_uri() .'/assets/images/mrg-img-hdr-hero-desk.jpg);"'; }*/ ?>>
-					<!-- This navs will be applied to the topbar, above all content 
-					To see additional nav styles, visit the /parts directory -->
-					<?php //get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-					<?php get_template_part( 'parts/nav', 'meridien' ); ?>
+				<header class="header blue-bgnd<?php if( is_front_page() ){ echo ' show-for-small-only'; } ?>" role="banner" id="site-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
+							
+					 <!-- This navs will be applied to the topbar, above all content 
+						  To see additional nav styles, visit the /parts directory -->
+					 <?php get_template_part( 'parts/nav', 'meridien' ); ?>
 	 	
 				</header> <!-- end .header -->
-
-<!--  style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-hdr-hero-desk.jpg);" -->
-
-				<!-- <div class="medium-3 columns" data-sticky-container>
-
-   <div class="sidebar sticky" data-sticky data-anchor="site-header"> -->
