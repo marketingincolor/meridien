@@ -465,6 +465,15 @@ a:hover { color:#d95221; }
   min-height: 120px;
   border:1.5px solid #b4b4bf;
 }
+.patient-subrouter:before { 
+  content:'';
+  bottom: auto;
+  left: 50%;
+  position: absolute;
+  height: 5%;
+  min-height: 100px;
+  border:1.5px solid #b4b4bf;
+}
 
 .patient-router-alt .cta-mobile { padding:2em; display:inline-flex; }
 .patient-router-alt .cta-mobile img { margin-right:2em; }
@@ -517,7 +526,7 @@ a:hover { color:#d95221; }
 /* CONTAINERS */
 .grid-container { max-width:64em; }
 .page-content-margin, .archive-content-margin, .trials-section { margin-top:6em; }
-.patient-router { padding:48px 0px 74px 0px; }
+.patient-router, .patient-subrouter { padding:48px 0px 74px 0px; }
 .casestudies-section, .testimonial-section { padding:6em 0em; }
 .excellence-section { padding:3em 0em; }
 
@@ -589,14 +598,14 @@ a:hover { color:#d95221; }
   .front-page-header { background-image:url('../images/mrg-img-hdr-hero-mob.jpg'); }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
-  .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-desk.jpg'); }
+  .benefits-section { background-image: url('../images/mrg-img-cta-vol-bg-mob.jpg'); }
   .studies-section { text-align:center; background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .top-bar { padding:.5em .5em; } 
   .page-hero, .single-hero { max-height: 10em; }
   .key-space { padding:30px 0px; }
-  .patient-router:before {  border:none; }
+  .patient-router:before, .patient-subrouter:before {  border:none; }
   .page-content-margin, .archive-content-margin, .trials-section { margin-top:3em; margin-bottom:3em; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:3em 0em; }
   .inner-footer { text-align:center; }
@@ -617,7 +626,7 @@ a:hover { color:#d95221; }
   .page-hero { max-height: 30em; }
   .single-hero { max-height: 20em; }
   .key-space { padding:90px 0px; }
-  .patient-router:before {  border:1.5px solid #b4b4bf; }
+  .patient-router:before, .patient-subrouter:before {  border:1.5px solid #b4b4bf; }
   .page-content-margin, .archive-content-margin, .trials-section { margin-top:6em; margin-bottom:6em; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:6em 0em; }
   .inner-footer { text-align:inherit; }

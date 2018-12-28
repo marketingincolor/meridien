@@ -23,6 +23,54 @@ get_header(); ?>
 					<!-- To see additional archive styles, visit the /parts directory -->
 					<?php get_template_part( 'parts/loop', 'archive-grid' ); ?>
 				    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<?php endwhile; ?>	
 
 					<?php joints_page_navi(); ?>

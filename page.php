@@ -109,21 +109,43 @@ get_header(); ?>
 <?php } ?>
 
 <?php if( is_front_page() ) { ?> 
-	<div class="studies-section" id="top-ref">
-		<div class="content grid-container">
-			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-7 cell">
-			    	<h3>Our studies etiam porta sem malesuada magna mollis.</h3>
-			    	<p>Nenean lacinia bibendum null asd consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis consectetuer adipiscing elit.</p>
-			    	<a href="./studies" class="orange-white-button">Visit All Our Active Studies</a>
-					<?php //get_template_part( 'parts/active', 'studies' ); ?>
-				</div> 
-			</div> 
-		</div> 
-	</div>
+	<?php get_template_part( 'parts/feed', 'studies' ); ?>
 <?php } ?>
 
 <?php if( is_page( 'patients' ) ) { ?> 
+
+	<div class="content grid-container">
+		<div class="row patient-subrouter grid-x grid-margin-x grid-padding-x text-center">
+			<div class="show-for-medium medium-6 cell has-bar">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-study-icon.svg" class="cta-icon">
+				<h4 class="header-text">Ready to See Our Available Studies in Your Area?</h4>
+				<a href="<?php echo site_url(); ?>/studies" class="orange-button">View Active Studies</a>
+			</div>
+			<div class="show-for-medium medium-6 cell">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-vol-icon.svg" class="cta-icon">
+				<h4 class="header-text">Want to Learn More About Meridien's Volunteer Experience?</h4>
+				<a href="<?php echo site_url(); ?>/patients/why-volunteer" class="orange-button">Why Volunteer</a>
+			</div>
+		</div> 
+	</div> 
+
+	<div class="content">
+		<div class="row patient-router-alt grid-x text-center">
+			<div class="show-for-small-only cell dk-orange-bgnd cta-mobile">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-study-icon-mobile.svg" class="cta-icon">
+				<a href="<?php echo site_url(); ?>/studies" class="white-button">View Active Studies In Your Area</a>
+			</div>
+			<div class="show-for-small-only cell orange-bgnd cta-mobile">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-vol-icon-mobile.svg" class="cta-icon">
+				<a href="<?php echo site_url(); ?>/patients/why-volunteer" class="white-button">Why Volunteer for a Meridien Study</a>
+			</div>
+		</div> 
+	</div> 
+
+
+
+
+
 	<div class="benefits-section">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
@@ -261,5 +283,16 @@ get_header(); ?>
 		</div> 
 	</div>
 <?php } ?>
+
+<?php if( is_page( 'why-volunteer' ) ) { ?> 
+
+	<?php get_template_part( 'parts/feed', 'studies' ); ?>
+	<?php get_template_part( 'parts/slider', 'testimonial' ); ?>
+
+<?php } ?>
+
+
+
+
 
 <?php get_footer(); ?>

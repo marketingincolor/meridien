@@ -4,12 +4,6 @@
  *
  * For more info: https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
-if ($post_type == 'studies' ) {
-	$age_range = get_field('age_range');
-	$location_object = get_field('location');
-	$location = $location_object->post_title;
-	$indication = get_field('indication');
-}
 get_header(); ?>
 			
 	<div class="content grid-container archive-content-margin">
@@ -27,6 +21,46 @@ get_header(); ?>
 				<div class="grid-x grid-padding-x">
 					<div class="cell small-12 text-center">
 						<h2 class="page-lead semi-font blue">Current Studies</h2>
+					</div>
+					<div class="cell small-12 text-center">
+
+
+
+
+
+
+
+
+
+					<h6>Filter by:</h6>
+                    <form action="<?php home_url( add_query_arg( array(), $wp->request ) );//bloginfo('url'); ?>" method="get">
+                       
+                            <?php
+                            $taxonomies = array('indications'); 
+                            $args = array('orderby'=>'name','hide_empty'=>false);
+                            $select = get_terms_dropdown_indication($taxonomies, $args);
+                            $select = preg_replace("#<select([^>]*)>#", "<select$1 STOPonchange='this.form.submit()'>", $select);
+                            echo $select;
+                            ?>
+                            <?php
+                            $taxonomies = array('study_location'); //CHANGE ME!
+                            $args = array('orderby'=>'name','hide_empty'=>false);
+                            $select = get_terms_dropdown_location($taxonomies, $args);
+
+                            $select = preg_replace("#<select([^>]*)>#", "<select$1 STOPonchange='return this.form.submit()'>", $select);
+                            echo $select;
+                            ?>
+                            <input type="submit" name="2submit" value="Sort" /> <!--CHANGE VALUE TO YOUR LIKING!-->
+                        
+                    </form>
+
+
+
+
+<?php echo do_shortcode('[searchandfilter fields="indications,study_location" headings="Indication,Location" submit_label="Filter" post_types="studies"]'); ?>
+
+					</div>
+					<div class="cell small-12 text-center">
 						<p>The following studies are available:</p>
 					</div>
 				</div>
@@ -34,13 +68,24 @@ get_header(); ?>
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php //get_template_part( 'parts/loop', 'archive' ); ?>
+					<?php //get_template_part( 'parts/loop', 'archive' );
+
+					//if ($post_type == 'studies' ) {
+						$age_range = get_field('age_range');
+						$location_object = get_field('location');
+						$location = $location_object->post_title;
+						//$indication = get_field('indication');
+						$study_indication = wp_get_post_terms( $post->ID, 'indications' );
+						$indication = $study_indication[0]->name;
+					//}
+
+					 ?>
 
 					<div class="cell">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">			
 						
 						<header class="article-header">
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); echo $post->ID; ?></a>
 							<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 						</header> <!-- end article header -->
 										
