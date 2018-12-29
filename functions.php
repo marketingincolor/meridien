@@ -168,7 +168,7 @@ function wordpress_breadcrumbs() {
 
 //THIS IS A NON-WORKING EXAMPLE FROM https://www.advancedcustomfields.com/resources/creating-wp-archive-custom-field-filter/
 //
-add_action('pre_get_posts', 'my_pre_get_posts', 10, 1);
+//add_action('pre_get_posts', 'my_pre_get_posts', 10, 1);
 function my_pre_get_posts( $query )
 {
   if( is_admin() ) 
@@ -189,52 +189,5 @@ function my_pre_get_posts( $query )
   $query->set('meta_query', $meta_query);
   return;
 } 
-
-
-
-
-
-
-
-
-
-
-function get_terms_dropdown_indication($taxonomies, $args){
-            $my_indication_terms = get_terms($taxonomies, $args);
-            $output ="<select name='indications' id='indications'>"; //CHANGE ME!
-            $output .="<option value=''>Indication:</option>"; //CHANGE ME TO YOUR LIKING!
-            foreach($my_indication_terms as $term){
-                    $root_url = get_bloginfo('url');
-                    $term_taxonomy = $term->taxonomy;
-                    $term_slug = $term->slug;
-                    $term_name = $term->name;
-                    $link = $term_slug;
-                    $output .="<option value='".$link."'>".$term_name."</option>";
-            }
-            $output .="</select>";
-    return $output;
-    }
-
-    function get_terms_dropdown_location($taxonomies, $args){
-            $my_location_terms = get_terms($taxonomies, $args);
-            $output ="<select name='location' id='location'>"; //CHANGE ME!
-            $output .="<option value=''>Location:</option>"; //CHANGE ME TO YOUR LIKING!               
-            foreach($my_location_terms as $term){
-                    $root_url = get_bloginfo('url');
-                    $term_taxonomy = $term->taxonomy;
-                    $term_slug = $term->slug;
-                    $term_name = $term->name;
-                    $link = $term_slug;
-                    $output .="<option value='".$link."'>".$term_name."</option>";
-            }
-            $output .="</select>";
-    return $output;
-    }
-
-
-
-
-
-
 
 

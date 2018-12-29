@@ -27,37 +27,7 @@ get_header(); ?>
 
 
 
-
-
-
-
-
-					<h6>Filter by:</h6>
-                    <form action="<?php home_url( add_query_arg( array(), $wp->request ) );//bloginfo('url'); ?>" method="get">
-                       
-                            <?php
-                            $taxonomies = array('indications'); 
-                            $args = array('orderby'=>'name','hide_empty'=>false);
-                            $select = get_terms_dropdown_indication($taxonomies, $args);
-                            $select = preg_replace("#<select([^>]*)>#", "<select$1 STOPonchange='this.form.submit()'>", $select);
-                            echo $select;
-                            ?>
-                            <?php
-                            $taxonomies = array('study_location'); //CHANGE ME!
-                            $args = array('orderby'=>'name','hide_empty'=>false);
-                            $select = get_terms_dropdown_location($taxonomies, $args);
-
-                            $select = preg_replace("#<select([^>]*)>#", "<select$1 STOPonchange='return this.form.submit()'>", $select);
-                            echo $select;
-                            ?>
-                            <input type="submit" name="2submit" value="Sort" /> <!--CHANGE VALUE TO YOUR LIKING!-->
-                        
-                    </form>
-
-
-
-
-<?php echo do_shortcode('[searchandfilter fields="indications,study_location" headings="Indication,Location" submit_label="Filter" post_types="studies"]'); ?>
+<?php echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="select,multiselect" headings="Indication,Location" submit_label="Filter" post_types="studies"]'); ?>
 
 					</div>
 					<div class="cell small-12 text-center">
@@ -85,12 +55,12 @@ get_header(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">			
 						
 						<header class="article-header">
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); echo $post->ID; ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
 							<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 						</header> <!-- end article header -->
 										
 						<section class="entry-content" itemprop="text">
-							<?php if ($post_type == 'studies' ) { ?>
+							<?php //if ($post_type == 'studies' ) { ?>
 							<div class="grid-x">
 								<div class="small-12 cell">
 									<h6 class="no-mar">Location: <?php echo $location; ?></h6>
@@ -99,10 +69,10 @@ get_header(); ?>
 									<h6 class="no-mar">Indication: <?php echo $indication; ?></h6>
 								</div>
 								<div class="small-12 cell">
-									<h6 class="no-mar">Age Range: <?php echo $age_range; ?></h6>
+									<h6 class="no-mar">Age Range: <?php echo $age_range; ?></h6><?php echo 'ID:'. $post->ID; ?>
 								</div>
 							</div>
-							<?php } ?>
+							<?php //} ?>
 						</section> <!-- end article section -->
 											
 						<footer class="article-footer">
