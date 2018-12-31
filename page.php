@@ -9,17 +9,6 @@ $page_hero_image = get_the_post_thumbnail_url($post->ID, 'full');
 get_header(); ?>
 
 <?php if( is_front_page() ) { ?> 
-<!-- 	<section class="page-hero" style="">
-	<div class="grid-container">
-		
-		<div class="grid-x">
-			<div class="small-10 small-offset-1 medium-8 medium-offset-1 cell">
-				<h4><?php echo $page_hero_meta; ?>INSERT SPECIAL HOME PAGE BLUE HEADER HERE</h4>
-			</div>
-		</div>
-
-	</div>
-</section> -->
 
 <div class="front-page-header header-cta">
 	<div class="content grid-container" style="padding-top:45px;">
@@ -45,7 +34,6 @@ get_header(); ?>
 				<p class="orange" style="margin-bottom:2em;"><a href="#top-ref"><i class="far fa-chevron-circle-down"></i></a></p>
 			</div>
 		</div>
-		<?php //echo $post->ID; ?>
 	</div>
 </div>
 <?php } ?>
@@ -64,8 +52,9 @@ get_header(); ?>
 	</section>
 <?php } ?>
 
+
+
 	<div class="content grid-container page-content page-content-margin">
-		<?php //if (function_exists('wordpress_breadcrumbs')) wordpress_breadcrumbs(); ?>
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
 				
@@ -79,171 +68,98 @@ get_header(); ?>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php if( is_page( 'patient-blog' ) || is_page( 'cro-blog' ) ) { 
 	$display_category = '';
 	if( is_page( 'patient-blog' ) ) { $display_category = 'patient'; }
 	if( is_page( 'cro-blog' ) ) { $display_category = 'sponsor-cro'; }
 	?> 
 
-
-
-
-
-
-<?php //echo do_shortcode('[searchandfilter hide_empty="0" fields="indications" types="select" headings="Indication" submit_label="Filter" post_types="post"]'); ?>
-
 	<div class="content grid-container page-content page-content-margin">
-		<?php //if (function_exists('wordpress_breadcrumbs')) wordpress_breadcrumbs(); ?>
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
-				<div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> 
 
-				<?php 
-				$args = array(
-					'post_type' => 'post',
-				    'category_name'    => $display_category,
-				    'order'    => 'ASC',
-				    'posts_per_page' => 2,
-				    'paged' => $paged
-				    );              
-				$custom_query = new WP_Query( $args );
-				if($custom_query->have_posts() ) : while ( $custom_query->have_posts() ) : $custom_query->the_post(); 
-				?>
-					<?php get_template_part( 'parts/loop', 'blog-grid' ); ?>
-				<?php endwhile; ?> 
-				</div>
+				<?php $_GET += array('newscat' => null); //$selected = $_GET['newscat']; ?>
+				<h4>Choose A Category <?php //echo html_entity_decode( $_GET['newscat'], ENT_QUOTES ); ?></h4>
+				<form action="" method="GET" id="newslist">
+					<select name="newscat" id="newscat" onchange="submit();">
+						<option value="" <?php echo ($_GET['newscat'] == '') ? ' selected="selected"' : ''; ?>>Show all</option>
+						<?php // TODO: something here is glitching the 's with some indications - needs another method?
+						    $categories = get_categories('taxonomy=indications&post_type=post'); 
+						    foreach ($categories as $category) : 
+						    echo '<option value="'.$category->name.'"';
+						    echo ($_GET['newscat'] == $category->name ) ? ' selected="selected"' : '';
+						    echo '>'.$category->name.'</option>';
+						    endforeach; 
+						?>
+					</select>
+				</form>
 
-				<div class="blog-pagination">
-				    <?php 
-				        echo paginate_links( array(
-				            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-				            'total'        => $custom_query->max_num_pages,
-				            'current'      => max( 1, get_query_var( 'paged' ) ),
-				            'format'       => '?paged=%#%',
-				            'show_all'     => false,
-				            'type'         => 'plain',
-				            'end_size'     => 2,
-				            'mid_size'     => 1,
-				            'prev_next'    => true,
-				            'prev_text'    => sprintf( '<i></i> %1$s', __( 'Previous', 'text-domain' ) ),
-				            'next_text'    => sprintf( '%1$s <i></i>', __( 'Next', 'text-domain' ) ),
-				            'add_args'     => false,
-				            'add_fragment' => '',
-				        ) );
-				    ?>
-				</div>
+				<div class="grid-x grid-margin-x grid-padding-x page-grid" data-equalizer> 
+					<?php // let the queries begin 
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;  
+					if( !isset($_GET['newscat']) || $_GET['newscat'] == '' ) {
+					    $newslist = new WP_Query( array(
+					    'post_type' => 'post',
+					    'category_name' => $display_category, 
+					    'posts_per_page' => 4,
+					    'order' => 'ASC',
+					    'paged' => $paged
+					    ) ); 
+					} else { //if select value exists (and isn't 'show all'), the query that compares $_GET value and taxonomy term (name)
+					    $newscategory = $_GET['newscat']; //get sort value
+					    $newslist = new WP_Query( array(
+					    'post_type' => 'post',
+					    'category_name' => $display_category,
+					    'posts_per_page' => 4,
+					    'order' => 'ASC',
+					    'paged' => $paged,
+					    'tax_query' => array(
+					        array(
+					        'taxonomy' => 'indications',
+					        'field' => 'name',
+					        'terms' => $newscategory
+					        ) 
+					    ) 
+					    ));
+					}
+					if ($newslist->have_posts()) :
+					while ( $newslist->have_posts() ) : $newslist->the_post(); 
+					?>
+						<?php get_template_part( 'parts/loop', 'blog-grid' ); ?>
 
-				<?php wp_reset_postdata(); ?>
+					<?php endwhile; ?>
+					</div>
 
-				<?php endif; ?>	
-				
-				
+					<div class="blog-pagination">
+					    <?php 
+					        echo paginate_links( array(
+					            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+					            'total'        => $newslist->max_num_pages,
+					            'current'      => max( 1, get_query_var( 'paged' ) ),
+					            'format'       => '?paged=%#%',
+					            'show_all'     => false,
+					            'type'         => 'plain',
+					            'end_size'     => 2,
+					            'mid_size'     => 1,
+					            'prev_next'    => true,
+					            'prev_text'    => sprintf( '<i></i> %1$s', __( 'Previous', 'text-domain' ) ),
+					            'next_text'    => sprintf( '%1$s <i></i>', __( 'Next', 'text-domain' ) ),
+					            'add_args'     => false,
+					            'add_fragment' => '',
+					        ) );
+					    ?>
+					<?php else : 
+						echo 'There are no news items in that category.'; ?>
+					<?php endif; ?>  
+					</div>
+					<?php wp_reset_query(); ?>
+
+
 			</main> <!-- end #main -->
 		</div> <!-- end #inner-content -->
 	</div> <!-- end #content -->
 
-
-
 <?php } ?>
-<!-- [display-posts wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-4 grid-margin-x grid-padding-x" posts_per_page="20" order="ASC" orderby="date" image_size="thumbnail"] -->
-
-
-
-
-
-
-<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
-<?php $_GET += array('newscat' => null); //$selected = $_GET['newscat']; ?>
-<h4>Filter News by Category</h4>
-<form action="" method="GET" id="newslist">
-<select name="newscat" id="newscat" onchange="submit();">
-<option value="" <?php echo ($_GET['newscat'] == '') ? ' selected="selected"' : ''; ?>>Show all</option>
-<?php 
-    $categories = get_categories('taxonomy=indications&post_type=post'); 
-    foreach ($categories as $category) : 
-    echo '<option value="'.$category->name.'"';
-    echo ($_GET['newscat'] == $category->name ) ? ' selected="selected"' : '';
-    echo '>'.$category->name.'</option>';
-    endforeach; 
-?>
-</select>
-</form>
-<?php // let the queries begin 
-$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;  
-if( !isset($_GET['newscat']) || '' == $_GET['newscat']) {
-    $newslist = new WP_Query( array(
-    'post_type' => 'post', 
-    'posts_per_page' => 3,
-    'orderby' => 'DATE',
-    'paged' => $paged
-    ) ); 
-} else { //if select value exists (and isn't 'show all'), the query that compares $_GET value and taxonomy term (name)
-    $newscategory = $_GET['newscat']; //get sort value
-    $newslist = new WP_Query( array(
-    'post_type' => 'post', 
-    'posts_per_page' => 8,
-    'orderby' => 'DATE',
-    'paged' => $paged,
-    'tax_query' => array(
-        array(
-        'taxonomy' => 'indications',
-        'field' => 'name',
-        'terms' => $newscategory
-        ) 
-    ) 
-    ));
-}
-if ($newslist->have_posts()) :
-while ( $newslist->have_posts() ) : $newslist->the_post(); 
-?>
-<?php get_template_part( 'parts/loop', 'blog-grid' ); ?>
-
-<?php endwhile; 
-else : 
-echo 'There are no news items in that category.'; 
-endif; 
-?>  
-<?php //wp_pagenavi( array( 'query' => $newslist ) ); ?> 
-<div class="blog-pagination">
-    <?php 
-        echo paginate_links( array(
-            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-            'total'        => $custom_query->max_num_pages,
-            'current'      => max( 1, get_query_var( 'paged' ) ),
-            'format'       => '?paged=%#%',
-            'show_all'     => false,
-            'type'         => 'plain',
-            'end_size'     => 2,
-            'mid_size'     => 1,
-            'prev_next'    => true,
-            'prev_text'    => sprintf( '<i></i> %1$s', __( 'Previous', 'text-domain' ) ),
-            'next_text'    => sprintf( '%1$s <i></i>', __( 'Next', 'text-domain' ) ),
-            'add_args'     => false,
-            'add_fragment' => '',
-        ) );
-    ?>
-</div>
-<?php wp_reset_query(); ?>
-<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
-
-
-
 
 
 

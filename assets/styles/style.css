@@ -543,6 +543,12 @@ a:hover { color:#d95221; }
 .display-posts-listing .listing-item .image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
 .display-posts-listing .listing-item .title { font-weight:700; line-height:1.4; padding:0.75em 0em; }
 
+.page-grid article .featured-image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
+
+.blog-grid-item { display:inline-grid; text-align: center; }
+.blog-grid-item .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
+
+.blog-pagination { float:right; }
 /* FORMS */
 .patient-form {}
 .patient-form .nf-field-element input[type=button] {
@@ -592,6 +598,8 @@ a:hover { color:#d95221; }
 .orbit-next, .orbit-previous { z-index:1; font-size:1.5em; }
 .orbit-next:active, .orbit-next:focus, .orbit-next:hover, .orbit-previous:active, .orbit-previous:focus, .orbit-previous:hover { background-color:transparent; }
 
+/* For SEARCHANDFILTER plugin FUNCTIONS */
+.searchandfilter ul { display:inline-flex; }
 
 /* 0 - 640 px */
 @media only screen {
@@ -602,12 +610,13 @@ a:hover { color:#d95221; }
   .studies-section { text-align:center; background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
+  .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .top-bar { padding:.5em .5em; } 
   .page-hero, .single-hero { max-height: 10em; }
   .key-space { padding:30px 0px; }
   .patient-router:before, .patient-subrouter:before {  border:none; }
   .page-content-margin, .archive-content-margin, .trials-section { margin-top:3em; margin-bottom:3em; }
-  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:3em 0em; }
+  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:3em 0em; }
   .inner-footer { text-align:center; }
   .terms, .privacy, .copyright { font-size:12px; font-weight:300; text-align:center; }
 }
@@ -621,6 +630,7 @@ a:hover { color:#d95221; }
   .studies-section { text-align:inherit; background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
+  .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .top-bar { padding:3em .5em; }
   .min-padding-header { padding:1em .5em; }
   .page-hero { max-height: 30em; }
@@ -628,7 +638,7 @@ a:hover { color:#d95221; }
   .key-space { padding:90px 0px; }
   .patient-router:before, .patient-subrouter:before {  border:1.5px solid #b4b4bf; }
   .page-content-margin, .archive-content-margin, .trials-section { margin-top:6em; margin-bottom:6em; }
-  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section { padding:6em 0em; }
+  .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:6em 0em; }
   .inner-footer { text-align:inherit; }
   .terms, .privacy, .copyright { font-size:inherit; font-weight:inherit; text-align:inherit; }
 }
@@ -641,6 +651,7 @@ a:hover { color:#d95221; }
   .studies-section { background-image:url('../images/mrg-img-cta-studies-bg-desk.jpg'); }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
+  .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .key-space { padding:90px 0px; }
 }
 /* 1440 - 1920 px */

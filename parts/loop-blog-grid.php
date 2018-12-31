@@ -17,10 +17,10 @@ $grid_columns = 4; ?>
 		<!--Item: -->
 		<div class="small-12 medium-3 cell panel" data-equalizer-watch>
 		
-			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+			<article id="post-<?php the_ID(); ?>" <?php post_class('blog-grid-item'); ?> role="article">
 			
 				<section class="featured-image" itemprop="text">
-					<?php the_post_thumbnail('full'); ?>
+					<?php the_post_thumbnail('thumbnail'); ?>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">

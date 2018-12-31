@@ -27,8 +27,8 @@ get_header(); ?>
 
 
 
-<?php echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="select,multiselect" headings="Indication,Location" submit_label="Filter" post_types="studies"]'); ?>
-
+<?php echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="select,multiselect" headings="Indication,Location" submit_label="Filter" post_types="studies" class="studies-list"]'); ?>
+<form action="<?php echo site_url('/studies/'); ?>" method="post" class="searchandfilter reset"><input type="submit" value="Clear"></form>
 					</div>
 					<div class="cell small-12 text-center">
 						<p>The following studies are available:</p>
