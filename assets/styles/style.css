@@ -545,10 +545,25 @@ a:hover { color:#d95221; }
 
 .page-grid article .featured-image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
 
+.archive .type-studies { text-align:center; }
+.archive .type-studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
+.archive .entry-content .entry-content-meta h6 { font-size:14px; font-weight:600; }
+
+.archive .archive-grid { margin-top:6em; }
+
 .blog-grid-item { display:inline-grid; text-align: center; }
 .blog-grid-item .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
 
+.location-grid-item { display:inline-grid; text-align: center; }
+.location-grid-item img { min-width:200px; border-radius:10px; }
+.location-grid-item .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
+
+.staff-grid-item { display:inline-grid; text-align: center; }
+.staff-grid-item img { min-width:200px; border-radius:10px; }
+.staff-grid-item .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
+
 .blog-pagination { float:right; }
+
 /* FORMS */
 .patient-form {}
 .patient-form .nf-field-element input[type=button] {
@@ -619,6 +634,7 @@ a:hover { color:#d95221; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:3em 0em; }
   .inner-footer { text-align:center; }
   .terms, .privacy, .copyright { font-size:12px; font-weight:300; text-align:center; }
+  .archive .archive-grid { margin-top:3em; }
 }
 
 /* 640 - 1024 px */
@@ -641,6 +657,7 @@ a:hover { color:#d95221; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:6em 0em; }
   .inner-footer { text-align:inherit; }
   .terms, .privacy, .copyright { font-size:inherit; font-weight:inherit; text-align:inherit; }
+  .archive .archive-grid { margin-top:6em; }
 }
 /* 1024 - 1440 px */
 @media only screen and (min-width: 63.063em){

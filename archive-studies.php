@@ -7,16 +7,8 @@
 get_header(); ?>
 			
 	<div class="content grid-container archive-content-margin">
-	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-		
 		    <main class="main small-12 medium-12 cell" role="main">
-			    
-		    	<!-- <header>
-		    		<h1 class="page-title"><?php the_archive_title();?></h1>
-		    						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
-		    	</header> -->
-		
 
 				<div class="grid-x grid-padding-x">
 					<div class="cell small-12 text-center">
@@ -25,16 +17,18 @@ get_header(); ?>
 					<div class="cell small-12 text-center">
 
 
+						<?php echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="select,multiselect" headings="Indication,Location" submit_label="Filter" post_types="studies" class="studies-list"]'); ?>
+						<form action="<?php echo site_url('/studies/'); ?>" method="post" class="searchandfilter reset"><input type="submit" value="Clear"></form>
+					
 
-
-<?php echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="select,multiselect" headings="Indication,Location" submit_label="Filter" post_types="studies" class="studies-list"]'); ?>
-<form action="<?php echo site_url('/studies/'); ?>" method="post" class="searchandfilter reset"><input type="submit" value="Clear"></form>
 					</div>
 					<div class="cell small-12 text-center">
 						<p>The following studies are available:</p>
 					</div>
 				</div>
-				<div class="grid-x grid-padding-x small-up-2 medium-up-4">
+
+				<!-- <div class="grid-x grid-padding-x grid-margin-x small-up-2 medium-up-4"> -->
+				<div class="grid-x grid-margin-x page-grid" data-equalizer> 
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<!-- To see additional archive styles, visit the /parts directory -->
@@ -51,17 +45,19 @@ get_header(); ?>
 
 					 ?>
 
-					<div class="cell">
+					<!-- <div class="cell"> -->
+					<div class="small-12 medium-3 cell panel" data-equalizer-watch>
+
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">			
 						
 						<header class="article-header">
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('small'); ?></a>
 							<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 						</header> <!-- end article header -->
 										
 						<section class="entry-content" itemprop="text">
 							<?php //if ($post_type == 'studies' ) { ?>
-							<div class="grid-x">
+							<div class="grid-x entry-content-meta">
 								<div class="small-12 cell">
 									<h6 class="no-mar">Location: <?php echo $location; ?></h6>
 								</div>
@@ -69,7 +65,7 @@ get_header(); ?>
 									<h6 class="no-mar">Indication: <?php echo $indication; ?></h6>
 								</div>
 								<div class="small-12 cell">
-									<h6 class="no-mar">Age Range: <?php echo $age_range; ?></h6><?php echo 'ID:'. $post->ID; ?>
+									<h6 class="no-mar">Age Range: <?php echo $age_range; ?></h6>
 								</div>
 							</div>
 							<?php //} ?>
@@ -84,43 +80,16 @@ get_header(); ?>
 
 
 				<?php endwhile; ?>	
-
 					<?php //joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
+				<?php else : ?>		
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
 				<?php endif; ?>
 		
 
 				</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			</main> <!-- end #main -->
-	
-			<?php //get_sidebar(); ?>
-	    
 	    </div> <!-- end #inner-content -->
-	    
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>

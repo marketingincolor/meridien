@@ -94,7 +94,7 @@ get_header(); ?>
 					</select>
 				</form>
 
-				<div class="grid-x grid-margin-x grid-padding-x page-grid" data-equalizer> 
+				<div class="grid-x grid-margin-x page-grid" data-equalizer> 
 					<?php // let the queries begin 
 					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;  
 					if( !isset($_GET['newscat']) || $_GET['newscat'] == '' ) {
@@ -269,8 +269,8 @@ get_header(); ?>
 		<div class="content grid-container page-content">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
-			    	<h3>Our Latest Blog Posts</h3>
-			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+			    	<h3><?php echo get_field('patient_blog_section_title', 'option'); ?></h3>
+			    	<?php echo get_field('patient_blog_section_content', 'option'); ?>
 
 					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
@@ -336,8 +336,8 @@ get_header(); ?>
 		<div class="content grid-container page-content">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
-			    	<h3>Our Latest Blog Posts</h3>
-			    	<p>Blog post lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+			    	<h3><?php echo get_field('sponsor_blog_section_title', 'option'); ?></h3>
+			    	<?php echo get_field('sponsor_blog_section_content', 'option'); ?>
 
 					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 

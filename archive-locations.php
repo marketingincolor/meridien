@@ -10,7 +10,7 @@ get_header(); ?>
 			
 	<div class="content grid-container archive-content-margin">
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-		    <main class="main small-12 medium-10 medium-offset-1 cell" role="main">
+		    <main class="main small-12 medium-12 cell" role="main">
 			    
 				<div class="grid-x grid-padding-x align-center">
 					<div class="cell small-12 medium-10 REMOVEmedium-offset-1 text-center">
@@ -19,10 +19,12 @@ get_header(); ?>
 					</div>
 				</div>	
 		
+				<div class="grid-x grid-margin-x archive-grid" data-equalizer>
+
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive-grid' ); ?>
+					<?php get_template_part( 'parts/loop', 'location-grid' ); ?>
 				    
 				<?php endwhile; ?>	
 
@@ -33,7 +35,8 @@ get_header(); ?>
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 						
 				<?php endif; ?>
-		
+
+				</div>
 			</main> <!-- end #main -->
 	    </div> <!-- end #inner-content -->
 	</div> <!-- end #content -->
