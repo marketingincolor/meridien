@@ -3,8 +3,11 @@ jQuery(document).foundation();
 These functions make sure WordPress
 and Foundation play nice together.
 */
-jQuery(document).ready(function(){// Remove empty P tags created by WP inside of Accordion and Orbit
-jQuery('.accordion p:empty, .orbit p:empty').remove();// Adds Flex Video to YouTube and Vimeo Embeds
+jQuery(document).ready(function(){
+ajaxFilterStudies();
+// Remove empty P tags created by WP inside of Accordion and Orbit
+jQuery('.accordion p:empty, .orbit p:empty').remove();
+// Adds Flex Video to YouTube and Vimeo Embeds
 jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function(){if(jQuery(this).innerWidth()/jQuery(this).innerHeight()>1.5){jQuery(this).wrap("<div class='widescreen responsive-embed'/>");}else{jQuery(this).wrap("<div class='responsive-embed'/>");}});});
 
 /*
@@ -19,3 +22,28 @@ jQuery(window).scroll(function() {
         jQuery(".top-bar").removeClass("min-padding-header");
     }
 });
+
+function ajaxFilterStudies(){
+	jQuery('#filter-studies').on('click',function(e){
+		e.preventDefault();
+    var locations   = jQuery('#locations-select').val();
+    var indications = jQuery('#indications-select').val();
+    var $content    = jQuery('#results-container');
+    var url         = templateURL + '/ajax-filter-studies.php';
+
+    // Show Loading Gif
+    $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
+
+		jQuery.ajax({
+			url: url,
+			type: 'POST',
+			data: {
+				locations : locations,
+				indications : indications
+			},
+			success: function(response) {
+        $content.html(response);
+      }
+		});
+	});
+}

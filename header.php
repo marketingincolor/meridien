@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/awesome.css">
 		<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/slider.css"> -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+		<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
