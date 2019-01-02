@@ -96,6 +96,6 @@
   else: 
 ?>
 
-  <h3>Sorry, no studies match the search. Please try again.</p>
+  <h3>Sorry, no studies match your filter. Please try again.</p>
 
 <?php endif;wp_reset_postdata(); ?>

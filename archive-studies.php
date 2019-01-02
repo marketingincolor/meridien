@@ -16,9 +16,6 @@ get_header(); ?>
 					</div>
 					<div class="cell small-12 text-center">
 
-						<?php //echo do_shortcode('[searchandfilter hide_empty="0" fields="indications,study_location" types="multiselect,multiselect" headings="Indication,Location" submit_label="Filter Studies" post_types="studies" class="studies-list"]'); ?>
-						<!-- <form action="<?php echo site_url('/studies/'); ?>" method="post" class="searchandfilter reset"><input type="submit" value="Clear"></form> -->
-
 						<form>
 						  <div class="grid-x grid-margin-x grid-margin-y">
 								<div class="medium-6 cell">
@@ -73,22 +70,16 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<!-- <div class="grid-x grid-padding-x grid-margin-x small-up-2 medium-up-4"> -->
 				<div id="results-container" class="grid-x grid-margin-x page-grid" data-equalizer> 
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php //get_template_part( 'parts/loop', 'archive' );
-
-					//if ($post_type == 'studies' ) {
+					
+					<?php 
 						$age_range = get_field('age_range');
 						$location_object = get_field('location');
 						$location = $location_object->post_title;
-						//$indication = get_field('indication');
 						$study_indication = wp_get_post_terms( $post->ID, 'indications' );
 						$indication = $study_indication[0]->name;
-					//}
-
 					 ?>
 
 					<!-- <div class="cell"> -->
