@@ -589,6 +589,27 @@ a:hover { color:#d95221; }
 .patient-form .nf-field-element select { border:0; border-radius:10px; color:#cbcbcb; }
 .patient-form .nf-multi-cell .nf-cell { padding:0 10px; }
 
+.sponsor-form {}
+.sponsor-form .nf-field-element input[type=button] {
+  background-color:transparent;
+  border:4px solid #fff;
+  border-radius:10px;
+  color:#fff;
+  font-weight:600;
+  font-size:18px;
+  padding:.5em 1em;
+  display:inline-block;
+  line-height:1;
+  cursor:pointer;
+  margin:1rem 0rem;
+}
+.sponsor-form .nf-field-element input[type=text],
+.sponsor-form .nf-field-element input[type=email],
+.sponsor-form .nf-field-element input[type=tel],
+.sponsor-form .nf-field-element select,
+.sponsor-form .nf-field-element textarea { border:0; border-radius:10px; color:#cbcbcb; }
+.sponsor-form .nf-multi-cell .nf-cell { padding:0 10px; }
+
 /* FOOTER */
 .footer { margin-top:0em; }
 .upper-footer-bg {

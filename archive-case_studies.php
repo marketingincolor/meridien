@@ -96,7 +96,7 @@ get_header(); ?>
 	    </div> <!-- end #inner-content -->
 	</div> <!-- end #content -->
 
-	<div class="cta-section orange-bgnd">
+	<div class="sponsor-form cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-8 medium-offset-2 text-center cell">

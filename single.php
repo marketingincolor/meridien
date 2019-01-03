@@ -36,20 +36,23 @@ get_header(); ?>
 </div> <!-- end #content -->
 
 <?php if( is_single() && has_term( 'patient', 'category' ) ) { ?> 
-	<div class="cta-section orange-bgnd">
+	<div class="patient-form cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-12 large-12 cell">
 			    	<h3>Patient CTA</h3>
 			    	<p>Patient Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 				</div> 
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">	
+			    	<?php echo do_shortcode('[ninja_form id=1]'); ?>
+				</div> 
 			</div> 
 		</div> 
 	</div>
 <?php } ?>
 
-<?php if( is_single() && has_term( 'sponsor-cro', 'category' ) ) { ?> 
-	<div class="cta-section orange-bgnd">
+<?php if( (is_single() && has_term( 'sponsor-cro', 'category' )) || is_singular('case_studies') ) { ?> 
+	<div class="sponsor-form cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 				<div class="small-12 medium-8 medium-offset-2 text-center cell">
