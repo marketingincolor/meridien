@@ -8,11 +8,11 @@
 // Adjust the amount of rows in the grid
 $grid_columns = 4; ?>
 
-<?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
+<?php //if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
+  <!-- <div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> Begin Grid-->
 
-<?php endif; ?> 
+<?php //endif; ?> 
 
 		<!--Item: -->
 		<div class="small-12 medium-3 cell panel" data-equalizer-watch>

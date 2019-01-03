@@ -5,6 +5,7 @@ and Foundation play nice together.
 */
 jQuery(document).ready(function(){
 ajaxFilterStudies();
+ajaxFilterBlogs();
 // Remove empty P tags created by WP inside of Accordion and Orbit
 jQuery('.accordion p:empty, .orbit p:empty').remove();
 // Adds Flex Video to YouTube and Vimeo Embeds
@@ -24,26 +25,71 @@ jQuery(window).scroll(function() {
 });
 
 function ajaxFilterStudies(){
-	jQuery('#filter-studies').on('click',function(e){
-		e.preventDefault();
+    jQuery('#filter-studies').on('click',function(e){
+        e.preventDefault();
     var locations   = jQuery('#locations-select').val();
     var indications = jQuery('#indications-select').val();
     var $content    = jQuery('#results-container');
     var url         = templateURL + '/ajax-filter-studies.php';
 
+    // if locations or indications is blank send alert and exit the function
+    if (indications === null || locations === null) {
+        alert('You must select both a location and indication.');
+        return false;
+    }
+
+    // Show Loading Gif
+    $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
+
+        jQuery.ajax({
+            url: url,
+            type: 'POST',
+            data: {
+                locations : locations,
+                indications : indications
+            },
+            success: function(response) {
+        $content.html(response);
+      }
+        });
+    });
+}
+
+function ajaxFilterBlogs(){
+	jQuery('#filter-blogs').on('click',function(e){
+		e.preventDefault();
+    var indications = jQuery('#indications-select').val();
+    var $content    = jQuery('#archive-grid');
+    var ajaxURL     = templateURL + '/ajax-filter-blogs.php';
+    var currentURL  = location.href;
+    var category;
+
+    // if locations or indications is blank send alert and exit the function
+    if (indications === null) {
+    	alert('You must select an indication to filter by.');
+    	return false;
+    }
+
+    // Get category based on current URL
+    if (currentURL.indexOf('patient') > -1) {
+        category = 'patient';
+    }else{
+        category = 'sponsor-cro';
+    }
+
     // Show Loading Gif
     $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
 
 		jQuery.ajax({
-			url: url,
+			url: ajaxURL,
 			type: 'POST',
 			data: {
-				locations : locations,
-				indications : indications
+				indications : indications,
+                category    : category
 			},
 			success: function(response) {
-        $content.html(response);
-      }
+                $content.html(response);
+            }
 		});
 	});
 }
