@@ -52,9 +52,12 @@ get_header(); ?>
 	<div class="cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
-			    <div class="small-12 medium-12 large-12 cell">
-			    	<h3>Sponsor CTA</h3>
-			    	<p>Sponsor Form lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">
+			    	<h3>Contact Us</h3>
+			    	<p>If you'd like more information about what Meridien Research can do for your company, simply contact us using the form below.</p>
+				</div> 
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">	
+			    	<?php echo do_shortcode('[ninja_form id=3]'); ?>
 				</div> 
 			</div> 
 		</div> 
