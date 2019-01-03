@@ -60,6 +60,11 @@ get_header(); ?>
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php get_template_part( 'parts/loop', 'page' ); ?>
+				  
+				  <?php if(is_page('faq')) { ?>
+				  	<?php get_template_part( 'parts/loop', 'faq-accordion' ); ?>
+				  <?php } ?>
+				  
 				<?php endwhile; endif; ?>							
 
 			</main> <!-- end #main -->
