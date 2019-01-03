@@ -7,7 +7,7 @@
 $url = $_SERVER['REQUEST_URI'];
 if (strpos($url, 'patient') !== false) {
   $archive_title = 'Patient Blog';//get_field('study_section_title', 'option');
-  $archive_content = 'Stay up to date wtih our current poss for Patients';//get_field('study_section_content', 'option');
+  $archive_content = 'Stay up to date with our current posts for Patients';//get_field('study_section_content', 'option');
 }else{
   $archive_title = 'CRO Blog';//get_field('study_section_title', 'option');
   $archive_content = 'Stay up to date with our current posts for Sponsors / CROs';//get_field('study_section_content', 'option');
@@ -51,7 +51,7 @@ get_header(); ?>
 						<button id="filter-blogs" class="orange-button" type="submit">Filter</button>
 					</div>
 				</div>
-				<div id="archive-grid" class="grid-x grid-margin-x grid-margin-y archive-grid">
+				<div id="archive-grid" class="grid-x grid-margin-x grid-margin-y archive-grid" data-equalizer>
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<!-- To see additional archive styles, visit the /parts directory -->

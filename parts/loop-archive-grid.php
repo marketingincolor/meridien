@@ -36,9 +36,9 @@ $grid_columns = 4; ?>
 			
 		</div>
 
-<?php if( 0 === ( $wp_query->current_post + 1 )  % $grid_columns ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
+<?php //if( 0 === ( $wp_query->current_post + 1 )  % $grid_columns ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
 
-   </div>  <!--End Grid --> 
+   <!-- </div>  --> <!--End Grid --> 
 
-<?php endif; ?>
+<?php //endif; ?>
 
