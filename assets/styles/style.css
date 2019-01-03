@@ -566,6 +566,8 @@ a:hover { color:#d95221; }
 
 .blog-pagination { float:right; }
 
+.accordion-content { border:none; }
+:last-child>.accordion-content:last-child { border:none; }
 /* FORMS */
 .patient-form {}
 .patient-form .nf-field-element input[type=button] {
