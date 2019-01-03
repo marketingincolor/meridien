@@ -28,7 +28,7 @@ get_header(); ?>
 				    
 				<?php endwhile; ?>	
 
-					<?php joints_page_navi(); ?>
+					<?php //joints_page_navi(); ?>
 					
 				<?php else : ?>
 											
@@ -38,6 +38,7 @@ get_header(); ?>
 		
 			</main> <!-- end #main -->
 	    </div> <!-- end #inner-content -->
+	    <?php joints_page_navi(); ?>
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
