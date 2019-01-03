@@ -6,6 +6,7 @@ and Foundation play nice together.
 jQuery(document).ready(function(){
 ajaxFilterStudies();
 ajaxFilterBlogs();
+ajaxFilterCaseStudies();
 // Remove empty P tags created by WP inside of Accordion and Orbit
 jQuery('.accordion p:empty, .orbit p:empty').remove();
 // Adds Flex Video to YouTube and Vimeo Embeds
@@ -56,8 +57,8 @@ function ajaxFilterStudies(){
 }
 
 function ajaxFilterBlogs(){
-	jQuery('#filter-blogs').on('click',function(e){
-		e.preventDefault();
+    jQuery('#filter-blogs').on('click',function(e){
+        e.preventDefault();
     var indications = jQuery('#indications-select').val();
     var $content    = jQuery('#archive-grid');
     var ajaxURL     = templateURL + '/ajax-filter-blogs.php';
@@ -66,8 +67,8 @@ function ajaxFilterBlogs(){
 
     // if locations or indications is blank send alert and exit the function
     if (indications === null) {
-    	alert('You must select an indication to filter by.');
-    	return false;
+        alert('You must select an indication to filter by.');
+        return false;
     }
 
     // Get category based on current URL
@@ -80,12 +81,43 @@ function ajaxFilterBlogs(){
     // Show Loading Gif
     $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
 
+        jQuery.ajax({
+            url: ajaxURL,
+            type: 'POST',
+            data: {
+                indications : indications,
+                category    : category
+            },
+            success: function(response) {
+                $content.html(response);
+            }
+        });
+    });
+}
+
+function ajaxFilterCaseStudies(){
+	jQuery('#filter-case-studies').on('click',function(e){
+		e.preventDefault();
+    var indications = jQuery('#indications-select').val();
+    var $content    = jQuery('#case-study-grid');
+    var ajaxURL     = templateURL + '/ajax-filter-case-studies.php';
+    var currentURL  = location.href;
+    var category;
+
+    // if locations or indications is blank send alert and exit the function
+    if (indications === null) {
+    	alert('You must select an indication to filter by.');
+    	return false;
+    }
+
+    // Show Loading Gif
+    $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
+
 		jQuery.ajax({
 			url: ajaxURL,
 			type: 'POST',
 			data: {
-				indications : indications,
-                category    : category
+				indications : indications
 			},
 			success: function(response) {
                 $content.html(response);
