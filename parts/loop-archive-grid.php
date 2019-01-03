@@ -20,7 +20,7 @@ $grid_columns = 4; ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 			
 				<section class="featured-image" itemprop="text">
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">

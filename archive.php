@@ -7,10 +7,10 @@
 $url = $_SERVER['REQUEST_URI'];
 if (strpos($url, 'patient') !== false) {
   $archive_title = 'Patient Blog';//get_field('study_section_title', 'option');
-  $archive_content = 'Patient Blog Content';//get_field('study_section_content', 'option');
+  $archive_content = 'Stay up to date wtih our current poss for Patients';//get_field('study_section_content', 'option');
 }else{
   $archive_title = 'CRO Blog';//get_field('study_section_title', 'option');
-  $archive_content = 'CRO Blog Content';//get_field('study_section_content', 'option');
+  $archive_content = 'Stay up to date with our current posts for Sponsors / CROs';//get_field('study_section_content', 'option');
 }
 
 
