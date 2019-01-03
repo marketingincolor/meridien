@@ -31,6 +31,12 @@ function ajaxFilterStudies(){
     var $content    = jQuery('#results-container');
     var url         = templateURL + '/ajax-filter-studies.php';
 
+    // if locations or indications is blank send alert and exit the function
+    if (indications === null || locations === null) {
+    	alert('You must select both a location and indication.');
+    	return false;
+    }
+
     // Show Loading Gif
     $content.html('<div class="small-12 cell text-center"><img class="loading" src="' + templateURL + '/assets/images/loading.gif" style="width:100px"></div>');
 
