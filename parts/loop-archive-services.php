@@ -19,6 +19,7 @@ if ($post_type == 'services' ) {
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 		<?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
 		<?php the_excerpt(); ?>
+		<p style="text-align:center;"><a href="<?php the_permalink() ?>"><button class="orange-button">Read More</button></a></p>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">

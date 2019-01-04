@@ -251,7 +251,7 @@ get_header(); ?>
 			    		<li>Obtain medical care at health care facilities during the trial.</li>
 			    		<li>Help others by contributing to medical research.</li>
 			    	</ul>
-			    	<a href="../studies" class="orange-white-button">Find Active Studies in your area</a>
+			    	<a href="<?php echo site_url(); ?>/studies" class="orange-white-button">Find Active Studies in your area</a>
 					<?php //get_template_part( 'parts/active', 'studies' ); ?>
 				</div> 
 			</div> 
@@ -279,7 +279,7 @@ get_header(); ?>
 
 					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/patients/patient-blog" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/blog/patient" class="orange-button">View All Blog Posts</a>
 
 				</div> 
 			</div> 
@@ -312,18 +312,19 @@ get_header(); ?>
 			    	<p>Meridien Research investigators are board certified and specialists in:</p>
 			    	<div class="grid-x">
 			    		<div class="small-6 cell">
-						<ul>
+						<ul class="services-list">
 							<li>Endocrinology</li>
 							<li>Mental Health</li>
 							<li>Dermatology</li>
-							<li>Internal Medicine</li>
+							<li>Men’s Health</li>
 						</ul>
 						</div>
 						<div class="small-6 cell">
-						<ul>
+						<ul class="services-list">
 							<li>Cardiology</li>
 							<li>CNS</li>
-							<li>Men’s & Women’s Health</li>
+							<li>Internal Medicine</li>
+							<li>Women’s Health</li>
 						</ul>
 						</div>
 					</div>
@@ -344,7 +345,7 @@ get_header(); ?>
 
 					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/sponsors/cro-blog" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/blog/sponsor-cro" class="orange-button">View All Blog Posts</a>
 
 				</div> 
 			</div> 

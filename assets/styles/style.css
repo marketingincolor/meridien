@@ -492,6 +492,11 @@ a:hover { color:#d95221; }
 .is-dropdown-submenu { background-color:#1f49a5 !important; border:none; }
 .sticky-container { background-color:#1f49a5; }
 
+.page-navigation { text-align:right; }
+.page-navigation .pagination {}
+.page-navigation .pagination a:hover { background:none; }
+.page-navigation .pagination .current { background:none; color:inherit; }
+
 /* BACKGROUND POSITIONINGS */
 .page-hero {
   height: 30em;
@@ -537,7 +542,9 @@ a:hover { color:#d95221; }
 .cta-section, .cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, 
 .benefits-section h3, .studies-section h3, .services-section h3, .trials-section h3 { color:#fff; }
 
-.services-section ul { list-style:none; display:inline-block; }
+.services-section ul { list-style:none; display:inline-block; text-align:left; margin-left:0; }
+.services-section .services-list li { margin: 1em 0em; }
+.services-section ul li::before { content: "\2022"; color:#ff7340; font-weight:bold; display:inline-block; width:1em; }
 
 .display-posts-listing .listing-item { display:inline-grid; text-align: center; }
 .display-posts-listing .listing-item .image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
@@ -651,6 +658,7 @@ a:hover { color:#d95221; }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
+  .social-logo { width:40px; }
   .top-bar { padding:.5em .5em; } 
   .page-hero, .single-hero { max-height: 10em; }
   .key-space { padding:30px 0px; }
@@ -672,6 +680,7 @@ a:hover { color:#d95221; }
   .services-section { background-image:url('../images/mrg-img-cta-services-bg-desk.jpg'); }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
+  .social-logo { width:32px; }
   .top-bar { padding:3em .5em; }
   .min-padding-header { padding:1em .5em; }
   .page-hero { max-height: 30em; }

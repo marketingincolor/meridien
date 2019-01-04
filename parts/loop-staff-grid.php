@@ -6,7 +6,7 @@
  */
 ?>
 		<!--Item: -->
-		<div class="small-12 medium-3 cell panel" data-equalizer-watch>
+		<div class="small-12 medium-3 text-center cell panel" data-equalizer-watch>
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class('staff-grid-item'); ?> role="article">
 			
