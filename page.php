@@ -328,8 +328,6 @@ get_header(); ?>
 						</div>
 					</div>
 					
-
-
 				</div> 
 			</div> 
 		</div> 
@@ -384,7 +382,21 @@ get_header(); ?>
 
 <?php } ?>
 
-
+<?php if( is_page( 'corporate-events' ) ) { ?> 
+	<div class="sponsor-form cta-section orange-bgnd">
+		<div class="content grid-container">
+			<div class="inner-content grid-x grid-margin-x grid-padding-x">
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">
+			    	<h3>Contact Us</h3>
+			    	<p>If you'd like more information about what Meridien Research can do for your company, simply contact us using the form below.</p>
+				</div> 
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">	
+			    	<?php echo do_shortcode('[ninja_form id=3]'); ?>
+				</div> 
+			</div> 
+		</div> 
+	</div>
+<?php } ?>
 
 
 
