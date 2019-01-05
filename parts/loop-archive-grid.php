@@ -15,7 +15,7 @@ $grid_columns = 4; ?>
 <?php //endif; ?> 
 
 		<!--Item: -->
-		<div class="small-12 medium-3 cell panel" data-equalizer-watch>
+		<div class="small-12 medium-3 text-center cell panel" data-equalizer-watch>
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 			
@@ -24,7 +24,7 @@ $grid_columns = 4; ?>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">
-					<h4 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>	
+					<h4 class="title topem"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>	
 					<?php //get_template_part( 'parts/content', 'byline' ); ?>				
 				</header> <!-- end article header -->	
 								

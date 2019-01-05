@@ -89,7 +89,7 @@ get_header(); ?>
 						
 						<header class="article-header">
 							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('small'); ?></a>
-							<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+							<h5 class="text topem"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 						</header> <!-- end article header -->
 										
 						<section class="entry-content" itemprop="text">

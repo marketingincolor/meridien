@@ -51,7 +51,7 @@ get_header(); ?>
 						<button id="filter-blogs" class="orange-button" type="submit">Filter</button>
 					</div>
 				</div>
-				<div id="archive-grid" class="grid-x grid-margin-x grid-margin-y archive-grid" data-equalizer>
+				<div id="archive-grid" class="grid-x grid-margin-x archive-grid" data-equalizer>
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<!-- To see additional archive styles, visit the /parts directory -->

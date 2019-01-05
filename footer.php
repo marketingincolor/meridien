@@ -39,7 +39,7 @@
 											<h6 class="no-mar">Meridien Research Corporate</h6>
 											<h6 class="no-mar">501 S. Boulevard</h6>
 											<h6>Tampa, FL 33060</h6>
-											<p>
+											<p style="margin-top:1em;">
 												<a href='<?php the_field('facebook_link', 'option'); ?>'>
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb-white.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg'"></a>
 												<a href='<?php the_field('twitter_link', 'option'); ?>'>
@@ -63,11 +63,11 @@
 							<div class="inner-footer grid-x grid-margin-x grid-padding-x">
 								
 								<div class="small-12 medium-3 large-3 cell">
-									<p class="terms"><a href="#">Terms & Conditions</a></p>
+									<p class="terms"><a href="<?php echo site_url(); ?>/terms-conditions">Terms & Conditions</a></p>
 								</div>
 
 								<div class="small-12 medium-3 large-3 cell">
-									<p class="privacy"><a href="#">Privacy Policy</a></p>
+									<p class="privacy"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
 								</div>
 								
 								<div class="small-12 medium-6 large-6 cell text-right">

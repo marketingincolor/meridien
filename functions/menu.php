@@ -12,6 +12,7 @@ register_nav_menus(
 function joints_top_nav() {
 	$menu_classes = is_front_page() ? 'medium-horizontal align-center menu' : 'medium-horizontal menu';
 	$search_link = '<img src="' . get_template_directory_uri() . '/assets/images/meridien-search-icon.svg" class="search-icon">';
+	//$search_link = '<button data-toggle="search-dropdown" class="search-dropdown-button"><img src="' . get_template_directory_uri() . '/assets/images/meridien-search-icon.svg" class="search-icon"></button><div class="dropdown-pane" id="search-dropdown" data-dropdown data-auto-focus="true"><form role="search"><div class="grid-container"><div class="grid-x grid-margin-x"><div class="cell medium-12"><input type="text" placeholder="Search" name="s"></div></div></div></form></div>';
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
