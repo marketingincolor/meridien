@@ -31,7 +31,7 @@ get_header(); ?>
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-4 text-center">
 				<p class="orange show-for-medium no-mar">Scroll To Learn More</p>
-				<p class="orange" style="margin-bottom:2em;"><a id="ref-link" href="#top-ref"><i class="far fa-chevron-circle-down"></i></a></p>
+				<p class="orange" style="margin-bottom:2em;"><a id="ref-link" href="#top-ref" data-smooth-scroll><i class="far fa-chevron-circle-down"></i></a></p>
 			</div>
 		</div>
 	</div>

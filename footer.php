@@ -38,7 +38,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-footer.svg" class="footer-logo">
 											<h6 class="no-mar">Meridien Research Corporate</h6>
 											<h6 class="no-mar">501 S. Boulevard</h6>
-											<h6>Tampa, FL 33060</h6>
+											<h6>Tampa, FL 33606</h6>
 											<p style="margin-top:1em;">
 												<a href='<?php the_field('facebook_link', 'option'); ?>'>
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb-white.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg'"></a>
