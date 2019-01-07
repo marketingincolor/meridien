@@ -503,6 +503,9 @@ a:hover { color:#d95221; }
 .page-navigation .pagination a:hover { background:none; }
 .page-navigation .pagination .current { background:none; color:inherit; }
 
+#menu-search .dropdown-pane { background-color:#1f49a5 !important; border:none; }
+#menu-search .dropdown-pane .drop-search input, .drop-search input { border-radius:25px; height:32px; }
+
 /* BACKGROUND POSITIONINGS */
 .page-hero {
   height: 30em;
@@ -606,13 +609,36 @@ a:hover { color:#d95221; }
 .patient-form .nf-field-element input[type=button]:hover {
   background-color:#fff;
   color:#ff7340;
-
 }
 .patient-form .nf-field-element input[type=text],
 .patient-form .nf-field-element input[type=email],
 .patient-form .nf-field-element input[type=tel],
-.patient-form .nf-field-element select { border:0; border-radius:10px; color:#75757d; }
+.patient-form .nf-field-element select { border:0; border-radius:10px; color:#48484d; }
 .patient-form .nf-multi-cell .nf-cell { padding:0 10px; }
+
+.patient-form-success {}
+.patient-form-success .nf-field-element input[type=button] {
+  background-color:transparent;
+  border:4px solid #ff7340;
+  border-radius:10px;
+  color:#75757d;
+  font-weight:600;
+  font-size:18px;
+  padding:.5em 1em;
+  display:inline-block;
+  line-height:1;
+  cursor:pointer;
+  margin:1rem 0rem;
+}
+.patient-form-success .nf-field-element input[type=button]:hover {
+  background-color:#fff;
+  color:#ff7340;
+}
+.patient-form-success .nf-field-element input[type=text],
+.patient-form-success .nf-field-element input[type=email],
+.patient-form-success .nf-field-element input[type=tel],
+.patient-form-success .nf-field-element select { border:0; border-radius:10px; color:#48484d; }
+.patient-form-success .nf-multi-cell .nf-cell { padding:0 10px; }
 
 .sponsor-form {}
 .sponsor-form .nf-field-element input[type=button] {
@@ -631,7 +657,6 @@ a:hover { color:#d95221; }
 .sponsor-form .nf-field-element input[type=button]:hover {
   background-color:#fff;
   color:#ff7340;
-
 }
 .sponsor-form .nf-field-element input[type=text],
 .sponsor-form .nf-field-element input[type=email],
@@ -639,6 +664,28 @@ a:hover { color:#d95221; }
 .sponsor-form .nf-field-element select,
 .sponsor-form .nf-field-element textarea { border:0; border-radius:10px; color:#75757d; }
 .sponsor-form .nf-multi-cell .nf-cell { padding:0 10px; }
+
+.error404 .search .search-form .search-submit, 
+.post-not-found .search .search-form .search-submit {
+  background-color:transparent;
+  border:4px solid #ff7340;
+  border-radius:10px;
+  color:#75757d;
+  font-weight:600;
+  font-size:18px;
+  padding:.5em 1em;
+  display:inline-block;
+  line-height:1;
+  cursor:pointer;
+  margin:1rem 0rem;
+}
+.error404 .search .search-form .search-submit:hover, 
+.post-not-found .search .search-form .search-submit:hover {
+  background-color:#fff;
+  color:#ff7340;
+
+}
+
 
 /* FOOTER */
 .footer { margin-top:0em; }

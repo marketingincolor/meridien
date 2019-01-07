@@ -22,6 +22,13 @@ get_header(); ?>
 				<?php joints_top_nav(); ?>	
 			</div>
 		</div>
+		<div class="grid-x grid-margin-y">
+			<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4 show-for-medium" style="margin-top:30px">
+				<form method="get" class="drop-search">
+					<input type="text" name="s" placeholder="Search Site">
+				</form>
+			</div>
+		</div>
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-10 medium-8 text-center key-space">
 				<h2><?php the_field('hero_title'); ?></h2>

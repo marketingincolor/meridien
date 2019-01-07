@@ -11,7 +11,7 @@
   if ($locations === 'all' || in_array('all', $locations)) {
   	$terms = get_terms( array(
 		  'taxonomy' => 'study_location',
-		  'hide_empty' => false,
+		  'hide_empty' => true,
 		));
 		foreach ($terms as $term) {
 			array_push($all_locations, $term->slug);
@@ -23,7 +23,7 @@
   if ($indications === 'all' || in_array('all', $indications)) {
   	$terms = get_terms( array(
 		  'taxonomy' => 'indications',
-		  'hide_empty' => false,
+		  'hide_empty' => true,
 		));
 		foreach ($terms as $term) {
 			array_push($all_indications, $term->slug);
