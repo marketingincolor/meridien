@@ -37,7 +37,7 @@ get_header(); ?>
 	</div> <!-- end #inner-content -->
 </div> <!-- end #content -->
 
-<?php if( is_single() ) { ?> 
+<?php if( is_single() && !is_single('corporate') ) { ?> 
 	<div class="location-studies-section">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">

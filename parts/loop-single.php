@@ -13,10 +13,26 @@
 
 		<?php if(is_singular('case_studies') ){ ?>
 			<div class="grid-x grid-padding-x small-up-2 medium-up-4">
-				<div class="cell"><h5>Goal: <?php the_field('enrollment_goal'); ?></h5></div>
-				<div class="cell"><h5>Actual: <?php the_field('actually_enrolled'); ?></h5></div>
-				<div class="cell"><h5>Random: <?php the_field('randomized'); ?>%</h5></div>
-				<div class="cell"><h5>Retention: <?php the_field('retention_rate'); ?>%</h5></div>
+				<div class="cell text-center">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-enroll.svg" class="study-logo">
+		    		<p class="no-mar">Enrollment Goal:</p>
+					<h5><?php the_field('enrollment_goal'); ?></h5>
+				</div>
+				<div class="cell text-center">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-actual.svg" class="study-logo">
+					<p class="no-mar">Actually Enrolled:</p>
+					<h5><?php the_field('actually_enrolled'); ?></h5>
+				</div>
+				<div class="cell text-center">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-random.svg" class="study-logo">
+					<p class="no-mar">Randomized:</p>
+					<h5><?php the_field('randomized'); ?>%</h5>
+				</div>
+				<div class="cell text-center">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-retention.svg" class="study-logo">
+					<p class="no-mar">Retention Rate:</p>
+					<h5><?php the_field('retention_rate'); ?>%</h5>
+				</div>
 			</div>
 		<?php } ?>
 

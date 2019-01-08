@@ -49,7 +49,7 @@ $retention_rate_avg    = $retention_rate_sum / count($retention_rate);
 			</div> 
 		</div> 
 
-		<div class="inner-content grid-x grid-margin-x grid-padding-x study-row">
+		<div class="inner-content grid-x grid-margin-x grid-padding-x study-row align-center">
 		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-enroll.svg" class="study-logo">
 		    	<p class="no-mar">Enrollment Goal:</p>

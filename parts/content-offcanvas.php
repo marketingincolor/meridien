@@ -27,7 +27,13 @@
 		</div>
 	</div>
 
-
+	<div class="grid-x grid-margin-y">
+		<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4" style="margin-top:30px">
+			<form method="get" class="drop-search">
+				<input type="text" name="s" placeholder="Search Site" style="border-radius:25px; height:32px;">
+			</form>
+		</div>
+	</div>
 
 
 

@@ -11,7 +11,7 @@
   if ($locations === 'all' || in_array('all', $locations)) {
   	$terms = get_terms( array(
 		  'taxonomy' => 'study_location',
-		  'hide_empty' => false,
+		  'hide_empty' => true,
 		));
 		foreach ($terms as $term) {
 			array_push($all_locations, $term->slug);
@@ -23,7 +23,7 @@
   if ($indications === 'all' || in_array('all', $indications)) {
   	$terms = get_terms( array(
 		  'taxonomy' => 'indications',
-		  'hide_empty' => false,
+		  'hide_empty' => true,
 		));
 		foreach ($terms as $term) {
 			array_push($all_indications, $term->slug);
@@ -64,7 +64,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">			
 		
 		<header class="article-header">
-			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('small'); ?></a>
+			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 			<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 		</header> <!-- end article header -->
 						

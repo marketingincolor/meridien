@@ -23,9 +23,9 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="grid-x grid-margin-y">
-			<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4" style="margin-top:30px">
-				<form method="get">
-					<input type="text" name="s" placeholder="Search Site" style="border-radius:25px">
+			<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4 show-for-medium" style="margin-top:30px">
+				<form method="get" class="drop-search">
+					<input type="text" name="s" placeholder="Search Site">
 				</form>
 			</div>
 		</div>
@@ -37,8 +37,8 @@ get_header(); ?>
 		</div>
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-4 text-center">
-				<p id="scroll-down" class="orange show-for-medium no-mar">Scroll To Learn More</p>
-				<p class="orange" style="margin-bottom:2em;"><a href="#top-ref"><i class="far fa-chevron-circle-down"></i></a></p>
+				<p class="orange show-for-medium no-mar">Scroll To Learn More</p>
+				<p class="orange" style="margin-bottom:2em;"><a id="ref-link" href="#top-ref" data-smooth-scroll><i class="far fa-chevron-circle-down"></i></a></p>
 			</div>
 		</div>
 	</div>
@@ -173,13 +173,8 @@ get_header(); ?>
 
 <?php } ?>
 
-
-
-
-
-
 <?php if( is_front_page() ) { ?> 
-	<div class="content grid-container">
+	<div class="content grid-container show-for-medium">
 		<div class="row patient-router grid-x grid-margin-x grid-padding-x text-center">
 			<div class="show-for-medium medium-6 cell has-bar">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon.svg" class="cta-icon">
@@ -198,11 +193,11 @@ get_header(); ?>
 		<div class="row patient-router-alt grid-x text-center">
 			<div class="show-for-small-only cell dk-orange-bgnd cta-mobile">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon-mobile.svg" class="cta-icon">
-				<a href="<?php echo site_url(); ?>/patients" class="white-button">Visit Patient Homepage</a>
+				<a href="<?php echo site_url(); ?>/patients" class="white-button" style="font-weight:600;">Visit Patient Homepage</a>
 			</div>
 			<div class="show-for-small-only cell orange-bgnd cta-mobile">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-sponsor-icon-mobile.svg" class="cta-icon">
-				<a href="<?php echo site_url(); ?>/sponsors" class="white-button">Visit Sponsor/CRO Homepage</a>
+				<a href="<?php echo site_url(); ?>/sponsors" class="white-button" style="font-weight:600;">Visit Sponsor/CRO Homepage</a>
 			</div>
 		</div> 
 	</div> 
@@ -214,7 +209,7 @@ get_header(); ?>
 
 <?php if( is_page( 'patients' ) ) { ?> 
 
-	<div class="content grid-container">
+	<div class="content grid-container show-for-medium">
 		<div class="row patient-subrouter grid-x grid-margin-x grid-padding-x text-center">
 			<div class="show-for-medium medium-6 cell has-bar">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-study-icon.svg" class="cta-icon">
@@ -233,18 +228,14 @@ get_header(); ?>
 		<div class="row patient-router-alt grid-x text-center">
 			<div class="show-for-small-only cell dk-orange-bgnd cta-mobile">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-study-icon-mobile.svg" class="cta-icon">
-				<a href="<?php echo site_url(); ?>/studies" class="white-button">View Active Studies In Your Area</a>
+				<a href="<?php echo site_url(); ?>/studies" class="white-button" style="font-weight:600;">View Active Studies In Your Area</a>
 			</div>
 			<div class="show-for-small-only cell orange-bgnd cta-mobile">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-vol-icon-mobile.svg" class="cta-icon">
-				<a href="<?php echo site_url(); ?>/patients/why-volunteer" class="white-button">Why Volunteer for a Meridien Study</a>
+				<a href="<?php echo site_url(); ?>/patients/why-volunteer" class="white-button" style="font-weight:600;">Why Volunteer for a Meridien Study</a>
 			</div>
 		</div> 
 	</div> 
-
-
-
-
 
 	<div class="benefits-section">
 		<div class="content grid-container">
@@ -258,7 +249,7 @@ get_header(); ?>
 			    		<li>Obtain medical care at health care facilities during the trial.</li>
 			    		<li>Help others by contributing to medical research.</li>
 			    	</ul>
-			    	<a href="../studies" class="orange-white-button">Find Active Studies in your area</a>
+			    	<a href="<?php echo site_url(); ?>/studies" class="orange-white-button">Find Active Studies in your area</a>
 					<?php //get_template_part( 'parts/active', 'studies' ); ?>
 				</div> 
 			</div> 
@@ -284,9 +275,9 @@ get_header(); ?>
 			    	<h3><?php echo get_field('patient_blog_section_title', 'option'); ?></h3>
 			    	<?php echo get_field('patient_blog_section_content', 'option'); ?>
 
-					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
+					<?php echo do_shortcode('[display-posts category="patient" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x align-center grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/patients/patient-blog" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/blog/patient" class="orange-button topspace">View All Blog Posts</a>
 
 				</div> 
 			</div> 
@@ -319,24 +310,23 @@ get_header(); ?>
 			    	<p>Meridien Research investigators are board certified and specialists in:</p>
 			    	<div class="grid-x">
 			    		<div class="small-6 cell">
-						<ul>
+						<ul class="services-list">
 							<li>Endocrinology</li>
 							<li>Mental Health</li>
 							<li>Dermatology</li>
-							<li>Internal Medicine</li>
+							<li>Men’s Health</li>
 						</ul>
 						</div>
 						<div class="small-6 cell">
-						<ul>
+						<ul class="services-list">
 							<li>Cardiology</li>
 							<li>CNS</li>
-							<li>Men’s & Women’s Health</li>
+							<li>Internal Medicine</li>
+							<li>Women’s Health</li>
 						</ul>
 						</div>
 					</div>
 					
-
-
 				</div> 
 			</div> 
 		</div> 
@@ -351,9 +341,9 @@ get_header(); ?>
 			    	<h3><?php echo get_field('sponsor_blog_section_title', 'option'); ?></h3>
 			    	<?php echo get_field('sponsor_blog_section_content', 'option'); ?>
 
-					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
+					<?php echo do_shortcode('[display-posts category="sponsor-cro" wrapper="div" wrapper_class="display-posts-listing grid-x small-up-1 medium-up-3 grid-margin-x align-center grid-padding-x" posts_per_page="3" order="ASC" orderby="date" image_size="thumbnail"]'); ?>
 
-					<a href="<?php echo site_url(); ?>/sponsors/cro-blog" class="orange-button">View All Blog Posts</a>
+					<a href="<?php echo site_url(); ?>/blog/sponsor-cro" class="orange-button topspace">View All Blog Posts</a>
 
 				</div> 
 			</div> 
@@ -391,7 +381,21 @@ get_header(); ?>
 
 <?php } ?>
 
-
+<?php if( is_page( 'corporate-events' ) ) { ?> 
+	<div class="sponsor-form cta-section orange-bgnd">
+		<div class="content grid-container">
+			<div class="inner-content grid-x grid-margin-x grid-padding-x">
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">
+			    	<h3>Contact Us</h3>
+			    	<p>If you'd like more information about what Meridien Research can do for your company, simply contact us using the form below.</p>
+				</div> 
+				<div class="small-12 medium-8 medium-offset-2 text-center cell">	
+			    	<?php echo do_shortcode('[ninja_form id=3]'); ?>
+				</div> 
+			</div> 
+		</div> 
+	</div>
+<?php } ?>
 
 
 
