@@ -17,9 +17,16 @@ get_header(); ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo">
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x align-center">
+		<div class="grid-x grid-padding-x">
 			<div class="cell show-for-medium">
 				<?php joints_top_nav(); ?>	
+			</div>
+		</div>
+		<div class="grid-x grid-margin-y">
+			<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4" style="margin-top:30px">
+				<form method="get">
+					<input type="text" name="s" placeholder="Search Site" style="border-radius:25px">
+				</form>
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x align-center">
@@ -30,7 +37,7 @@ get_header(); ?>
 		</div>
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-4 text-center">
-				<p class="orange show-for-medium no-mar">Scroll To Learn More</p>
+				<p id="scroll-down" class="orange show-for-medium no-mar">Scroll To Learn More</p>
 				<p class="orange" style="margin-bottom:2em;"><a href="#top-ref"><i class="far fa-chevron-circle-down"></i></a></p>
 			</div>
 		</div>
