@@ -288,7 +288,7 @@ get_header(); ?>
 		<div class="content grid-container page-content">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
-			    	<h3>Interested in partcipating in a study?</h3>
+			    	<h3>Interested in participating in a study?</h3>
 			    	<p>Please complete this Patient Form.</p>
 			    </div>
 			    <div class="small-12 medium-8 medium-offset-2 text-center cell">	
@@ -381,7 +381,7 @@ get_header(); ?>
 
 <?php } ?>
 
-<?php if( is_page( 'corporate-events' ) ) { ?> 
+<?php if( is_page( 'sponsors' ) || is_page( 'corporate-events' ) ) { ?> 
 	<div class="sponsor-form cta-section orange-bgnd">
 		<div class="content grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
