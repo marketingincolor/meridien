@@ -17,7 +17,7 @@ get_header(); ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo">
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x align-center">
+		<div class="grid-x grid-padding-x">
 			<div class="cell show-for-medium">
 				<?php joints_top_nav(); ?>	
 			</div>
