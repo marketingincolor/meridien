@@ -11,7 +11,7 @@ global $post;
 	<div class="top-bar" id="top-bar-menu">
 
 		<div class="top-bar-left nav-logo float-left">
-			<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo"></a>
+			<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-color.svg" class="header-logo"></a>
 		</div>
 		<div class="top-bar-right show-for-medium">
 			<?php joints_top_nav(); ?>	

@@ -37,11 +37,48 @@
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
-				
-				<header class="header blue-bgnd<?php if( is_front_page() ){ echo ' show-for-small-only'; } ?>" role="banner" id="site-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
 							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'meridien' ); ?>
-	 	
-				</header> <!-- end .header -->
+
+<?php if( is_front_page() ) { ?> 
+<!-- <div class="new-front-page-header new-header-cta" style="background-color:red; width:100%; position:absolute;">
+	<div class="new-header-cta-msg" style="background-color:blue; width:50%;">
+		<p>NEW <br><br><br><br><br><br><br><br><br><br>CTA<br><br><br><br><br><br><br><br><br><br>HEADER<p><br clear="both">
+	</div>
+</div> -->
+<div class="grid-container full front-header-cta">
+<?php } ?>	
+
+	<header class="header white-tp-bgnd<?php //if( is_front_page() ){ echo ' show-for-small-only'; } ?>" role="banner" id="site-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
+				
+		 <!-- This navs will be applied to the topbar, above all content 
+			  To see additional nav styles, visit the /parts directory -->
+		 <?php get_template_part( 'parts/nav', 'meridien' ); ?>
+
+	</header> <!-- end .header -->
+
+
+<?php if( is_front_page() ) { ?> 
+	<div class="grid-x">
+		<div class="grid-container full">
+			<div class="grid-x grid-margin-x">
+				<div class="cell show-for-large large-5 front-header-blue-cta">
+					<h1>Medical Research Close to Home!</h1>
+					<p>Meridien Research provides people of all ages with the opportunity to participate in medical research studies for medical and mental health conditions.</p>
+				</div>
+				<div class="cell show-for-large large-7"></div>
+				<div class="cell hide-for-large small-12" style="padding:12em;"></div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="cell hide-for-large small-12 front-header-blue-cta" style="padding:2em !important; background-color:rgba(31, 73, 165, 1) !important;">
+	<h1>Medical Research Close to Home!</h1>
+	<p>Meridien Research provides people of all ages with the opportunity to participate in medical research studies for medical and mental health conditions.</p>
+</div>
+<aside class="orange-line"></aside>
+<a href="#top-ref" class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/sm-scroll-btn.svg" class="anchor-button"></a>
+
+<?php } ?>	

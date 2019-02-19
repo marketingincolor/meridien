@@ -375,6 +375,7 @@ a:hover { color:#d95221; }
 .header-text { color:#75757d; }
 .text { color:#48484d; }
 .blue-bgnd { background-color:#1f49a5; }
+.white-tp-bgnd { background-color:rgba(255,255,255,0.9); }
 .orange-bgnd { background-color:#ff7340; }
 .dk-orange-bgnd { background-color:#d95221; }
 
@@ -440,15 +441,17 @@ a:hover { color:#d95221; }
 .orange-white-button:hover { background-color:#ff7340; }
 
 /* HEADER */
-.header, .header h2 { color:#fff; }
-.header-cta, .header-cta h2 { color:#fff; }
+/*.header, .header h2 { color:#fff; }
+.header-cta, .header-cta h2 { color:#fff; }*/
+.header, .header h2 { color:#1f49a5; }
+.header-cta, .header-cta h2 { color:#1f49a5; }
 .top-bar { background:transparent; }
 .top-bar { padding:3em .5em; }
 .min-padding-header { padding:1em .5em; }
 .top-bar ul { background:transparent; }
-.top-bar .header-logo { width:160px; }
+.top-bar .header-logo { /*width:160px;*/ width:244px; }
 .home .header .header-logo { max-width:80%; /*margin-bottom:45px;*/ }
-.top-bar-left.nav-logo, .top-bar-right.nav-drop { width:49% !important; flex:inherit !important; }
+.top-bar-left.nav-logo, .top-bar-right.nav-drop { /* width:49% !important; */width:30% !important; flex:inherit !important; }
 .top-bar-right.nav-drop .menu {  float:right; }
 .top-bar-right.nav-drop .menu li { display:inline-block; }
 .menu-icon:after, .menu-icon:hover:after { 
@@ -456,7 +459,28 @@ a:hover { color:#d95221; }
   box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340;
   -webkit-box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340; 
 }
+#inline-search input { border-radius:25px; height:28px; margin:2px 5px; border:1px solid #1f49a5; text-align:center; width:8em; }
+#inline-search input::placeholder { font-size:14px; }
 .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg');}
+.front-header-cta { 
+  background-image:url('../images/mrg-img-hdr-home-desk.jpg'); 
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size:cover;
+}
+.orange-line { border:4px solid #ff7340; }
+.anchor-button {
+  position:relative;
+  float:left;
+  top:-16px;
+  margin-left:50%;
+}
+.front-header-blue-cta {
+  background-color:rgba(31, 73, 165, 0.8); 
+  color:#fff; 
+  padding:8em 6em;
+}
+.front-header-blue-cta h1 { color:#fff; font-size:32px; font-weight:500; }
 .search-icon { height:24px; width:24px; margin:6px 12px; }
 
 .patient-router:before { 
@@ -495,8 +519,10 @@ a:hover { color:#d95221; }
 .menu .active >a { background:transparent; color:#d95221; }
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after { border-color:#ff7340 transparent transparent; }
 .dropdown.menu .is-active>a { color:#d95221; }
-.is-dropdown-submenu { background-color:#1f49a5 !important; border:none; }
-.sticky-container { background-color:#1f49a5; }
+/* .is-dropdown-submenu { background-color:#1f49a5 !important; border:none; }
+.sticky-container { background-color:#1f49a5; } */
+.is-dropdown-submenu { background-color:rgba(255,255,255,0.9) !important; border:none; }
+.sticky-container { /*background-color:rgba(255,255,255,0.9);*/ z-index:10; }
 
 .page-navigation { text-align:right; }
 .page-navigation .pagination {}
@@ -690,18 +716,21 @@ a:hover { color:#d95221; }
 /* FOOTER */
 .footer { margin-top:0em; }
 .upper-footer-bg {
-  background-color:#b4b4bf;
+  /*background-color:#b4b4bf;*/
+  background-color:#ccccd9;
   color:#48484d;
   font-weight:400;
 }
 .upper-footer-bg .inner-footer { padding:6em 0em 6em; }
 
 .lower-footer-bg  { 
-  background-color:#75757d; 
-  color:#fff; 
+  /*background-color:#75757d;
+  color:#fff;*/
+  background-color:#b4b4bf; 
+  color:##48484D;
   font-weight:500;
 }
-.lower-footer-bg a { color:#fff; }
+.lower-footer-bg a { color:##48484D; }
 .lower-footer-bg a:hover { color:#d95221; }
 .lower-footer-bg .inner-footer p { margin-bottom:0; }
 .lower-footer-bg .inner-footer { padding:2.25em 0em; }
@@ -711,7 +740,7 @@ a:hover { color:#d95221; }
 .inner-footer .menu li .submenu li { width:100%; }
 
 #menu-footer-links-three {}
-#menu-footer-links-three li:first-child, #menu-footer-links-two li:first-child, #menu-footer-links li:first-child { font-weight:900; }
+#menu-footer-links-three li:first-child, #menu-footer-links-two li:first-child, #menu-footer-links li:first-child { color:#1f49a5; font-weight:900; }
 #menu-footer-links-three li:last-child, #menu-footer-links-two li:last-child, #menu-footer-links li:last-child { border-bottom:none; padding-bottom:none; margin-bottom:none; }
 
 /* For ORBIT FUNCTIONS */
@@ -763,7 +792,7 @@ a:hover { color:#d95221; }
   .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   article { margin:0em 0em; }
   .social-logo { width:32px; }
-  .top-bar { padding:3em .5em; }
+  .top-bar { padding:1.25em .5em; }
   .min-padding-header { padding:1em .5em; }
   .page-hero { max-height: 30em; }
   .single-hero { max-height: 20em; }

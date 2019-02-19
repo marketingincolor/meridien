@@ -7,10 +7,10 @@
 ?>
 <div class="off-canvas position-right" id="off-canvas" data-off-canvas>
 
-	<div class="content grid-container blue-bgnd">
+	<div class="content grid-container white-tp-bgnd">
 		<div class="top-bar" id="top-bar-menu">
 			<div class="top-bar-left nav-logo float-left">
-				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo"></a>
+				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-color.svg" class="header-logo"></a>
 			</div>
 			<div class="top-bar-right nav-drop float-right show-for-small-only">
 				<ul class="menu">

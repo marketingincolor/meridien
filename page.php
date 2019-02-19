@@ -10,40 +10,8 @@ get_header(); ?>
 
 <?php if( is_front_page() ) { ?> 
 
-<div class="front-page-header header-cta">
-	<div class="content grid-container" style="padding-top:45px;">
-		<div class="grid-x grid-padding-x align-center show-for-medium">
-			<div class="cell medium-4 text-center">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo.svg" class="header-logo">
-			</div>
-		</div>
-		<div class="grid-x grid-padding-x align-center">
-			<div class="cell show-for-medium">
-				<?php joints_top_nav(); ?>	
-			</div>
-		</div>
-		<div class="grid-x grid-margin-y">
-			<div class="cell small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4 show-for-medium" style="margin-top:30px">
-				<form method="get" class="drop-search">
-					<input type="text" name="s" placeholder="Search Site">
-				</form>
-			</div>
-		</div>
-		<div class="grid-x grid-padding-x align-center">
-			<div class="cell small-10 medium-8 text-center key-space">
-				<h2><?php the_field('hero_title'); ?></h2>
-				<p><?php the_field('hero_caption'); ?></p>
-			</div>
-		</div>
-		<div class="grid-x grid-padding-x align-center">
-			<div class="cell small-4 text-center">
-				<p class="orange show-for-medium no-mar">Scroll To Learn More</p>
-				<p class="orange" style="margin-bottom:2em;"><a id="ref-link" href="#top-ref" data-smooth-scroll><i class="far fa-chevron-circle-down"></i></a></p>
-			</div>
-		</div>
-	</div>
-</div>
-<?php } ?>
+
+<?php } ?><br clear="both">
 
 <?php if( !is_front_page() && $page_hero_image !='' ) { ?> 
 	<section class="page-hero" style="background-image: url(<?php echo $page_hero_image; ?>);">

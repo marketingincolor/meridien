@@ -35,7 +35,7 @@
 					    					</nav>
 										</div>
 										<div class="small-12 medium-4 cell">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-footer.svg" class="footer-logo">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-color.svg" class="footer-logo">
 											<h6 class="no-mar">Meridien Research Corporate</h6>
 											<h6 class="no-mar">501 S. Boulevard</h6>
 											<h6>Tampa, FL 33606</h6>
