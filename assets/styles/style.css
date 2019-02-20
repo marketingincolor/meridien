@@ -398,7 +398,7 @@ a:hover { color:#d95221; }
 /* BUTTONS AND ICONS */
 .orange-button, .orange-button:hover, .orange-button:visited, .orange-button:active {
   background-color:transparent;
-  border:4px solid #ff7340;
+  border:3px solid #ff7340;
   border-radius:10px;
   color:#75757d;
   font-weight:800;
@@ -413,7 +413,7 @@ a:hover { color:#d95221; }
 
 .white-button, .white-button:hover, .white-button:visited, .white-button:active {
   background-color:transparent;
-  border:4px solid #fff;
+  border:3px solid #fff;
   border-radius:10px;
   color:#fff;
   font-weight:600;
@@ -427,12 +427,12 @@ a:hover { color:#d95221; }
 
 .orange-white-button, .orange-white-button:hover, .orange-white-button:visited, .orange-white-button:active {
   background-color:transparent;
-  border:4px solid #ff7340;
+  border:3px solid #ff7340;
   border-radius:10px;
   color:#fff;
   font-weight:600;
   font-size:18px;
-  padding:.5em 1em;
+  padding:.75em 1em;
   display:inline-block;
   line-height:1;
   cursor:pointer;
@@ -450,7 +450,7 @@ a:hover { color:#d95221; }
 .min-padding-header { padding:1em .5em; }
 .top-bar ul { background:transparent; }
 .top-bar .header-logo { /*width:160px;*/ width:244px; }
-.home .header .header-logo { max-width:80%; /*margin-bottom:45px;*/ }
+.home .header .header-logo { /*max-width:80%; margin-bottom:45px;*/ }
 .top-bar-left.nav-logo, .top-bar-right.nav-drop { /* width:49% !important; */width:30% !important; flex:inherit !important; }
 .top-bar-right.nav-drop .menu {  float:right; }
 .top-bar-right.nav-drop .menu li { display:inline-block; }
@@ -459,8 +459,8 @@ a:hover { color:#d95221; }
   box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340;
   -webkit-box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340; 
 }
-#inline-search input { border-radius:25px; height:28px; margin:2px 5px; border:1px solid #1f49a5; text-align:center; width:8em; }
-#inline-search input::placeholder { font-size:14px; }
+#inline-search input { border-radius:25px; height:28px; margin:2px 5px; border:1px solid #4473b9; text-align:center; width:8em; display:inline-block; }
+#inline-search input::-webkit-input-placeholder, #inline-search input::placeholder { font-size:12px; font-weight:600; transform:translate3d(0,-2px,0); }
 .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg');}
 .front-header-cta { 
   background-image:url('../images/mrg-img-hdr-home-desk.jpg'); 
@@ -476,7 +476,7 @@ a:hover { color:#d95221; }
   margin-left:50%;
 }
 .front-header-blue-cta {
-  background-color:rgba(31, 73, 165, 0.8); 
+  background-color:rgba(31, 73, 165, 0.9); 
   color:#fff; 
   padding:8em 6em;
 }
@@ -504,7 +504,7 @@ a:hover { color:#d95221; }
 
 .patient-router-alt .cta-mobile { padding:2em; display:inline-flex; }
 .patient-router-alt .cta-mobile img { margin-right:2em; }
-.patient-router-alt .cta-mobile .white-button { margin:auto; font-size:16px; font-weight:500; padding:1.25em .5em; }
+.patient-router-alt .cta-mobile .white-button { margin:auto; font-size:18px; font-weight:500; padding:.75em .5em; }
 
 /* NAVIGATION AND MENUS */
 .off-canvas { background:#f0f0ff; }
@@ -722,7 +722,6 @@ a:hover { color:#d95221; }
   font-weight:400;
 }
 .upper-footer-bg .inner-footer { padding:6em 0em 6em; }
-
 .lower-footer-bg  { 
   /*background-color:#75757d;
   color:#fff;*/
@@ -753,6 +752,7 @@ a:hover { color:#d95221; }
 
 /* 0 - 640 px */
 @media only screen {
+  .home .header .header-logo { max-width:130%; }
   .front-page-header { background-image:url('../images/mrg-img-hdr-hero-mob.jpg'); }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
@@ -762,26 +762,29 @@ a:hover { color:#d95221; }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   article { margin:1em 0em; }
+  h3.header-text { font-size:1.75em; line-height:1.25em; }
   .social-logo { width:40px; }
   .top-bar { padding:.5em .5em; } 
   .page-hero, .single-hero { max-height: 10em; }
   .key-space { padding:30px 0px; }
   .patient-router:before, .patient-subrouter:before {  border:none; }
-  .page-content-margin, .archive-content-margin, .trials-section { margin-top:3em; margin-bottom:3em; }
+  .page-content-margin, .archive-content-margin, .trials-section { margin-top:1.5em; margin-bottom:1.5em; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:3em 0em; }
   .casestudies-section .study-row .cell { margin:1em 0em; }
+  .upper-footer-bg .inner-footer { padding:4em 0em 6em; }
   .inner-footer { text-align:center; }
   .inner-footer .footer-logo { max-width:60%; margin-top:1.5em; margin-bottom:1.5em; }
   .terms, .privacy, .copyright { font-size:16px; font-weight:300; text-align:center; padding:.25em 0em; }
   .archive .archive-grid { margin-top:3em; }
   #menu-footer-links-three li:last-child, 
   #menu-footer-links-two li:last-child, 
-  #menu-footer-links li:last-child { border-bottom:1px solid #48484d; padding-bottom:1em; margin-bottom:1em; }
+  #menu-footer-links li:last-child { /*border-bottom:1px solid #48484d;*/ padding-bottom:1em; margin-bottom:2em; }
   #ref-link { font-size:48px; }
 }
 
 /* 640 - 1024 px */
 @media only screen and (min-width: 40.063em){
+  .home .header .header-logo { max-width:100%; }
   .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg'); }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
@@ -791,6 +794,7 @@ a:hover { color:#d95221; }
   .trials-section { background-image:url('../images/mrg-img-about-trials-bg-desk.jpg'); }
   .location-studies-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   article { margin:0em 0em; }
+  h3.header-text { font-size:1.1875em; line-height:unset; }
   .social-logo { width:32px; }
   .top-bar { padding:1.25em .5em; }
   .min-padding-header { padding:1em .5em; }
@@ -798,12 +802,13 @@ a:hover { color:#d95221; }
   .single-hero { max-height: 20em; }
   .key-space { padding:90px 0px; }
   .patient-router:before, .patient-subrouter:before {  border:1.5px solid #b4b4bf; }
-  .page-content-margin { margin-top:6em; margin-bottom:4em; }
+  .page-content-margin { margin-top:4em; margin-bottom:4em; }
   .archive-content-margin, .trials-section { margin-top:6em; margin-bottom:6em; }
   .casestudies-section, .testimonial-section, .benefits-section, .services-section, .studies-section, .location-studies-section { padding:6em 0em; }
   .casestudies-section .study-row .cell { margin:0em 0em; }
+  .upper-footer-bg .inner-footer { padding:6em 0em 6em; }
   .inner-footer { text-align:inherit; }
-  .inner-footer .footer-logo { max-width:80%; margin-top:0; margin-bottom:1em; }
+  .inner-footer .footer-logo { max-width:70%; margin-top:0; margin-bottom:1em; }
   .terms, .privacy, .copyright { font-size:inherit; font-weight:inherit; text-align:inherit; }
   .archive .archive-grid { margin-top:6em; }
   #menu-footer-links-three li:last-child, 

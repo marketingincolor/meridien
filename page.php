@@ -11,7 +11,7 @@ get_header(); ?>
 <?php if( is_front_page() ) { ?> 
 
 
-<?php } ?><br clear="both">
+<?php } ?><!-- <br clear="both"> -->
 
 <?php if( !is_front_page() && $page_hero_image !='' ) { ?> 
 	<section class="page-hero" style="background-image: url(<?php echo $page_hero_image; ?>);">

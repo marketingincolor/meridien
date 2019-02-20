@@ -74,7 +74,7 @@
 
 </div>
 
-<div class="cell hide-for-large small-12 front-header-blue-cta" style="padding:2em !important; background-color:rgba(31, 73, 165, 1) !important;">
+<div class="cell hide-for-large small-12 front-header-blue-cta" style="padding:2em !important; background-color:rgba(31, 73, 165, 1) !important; text-align:center;">
 	<h1>Medical Research Close to Home!</h1>
 	<p>Meridien Research provides people of all ages with the opportunity to participate in medical research studies for medical and mental health conditions.</p>
 </div>

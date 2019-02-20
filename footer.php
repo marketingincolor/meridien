@@ -41,9 +41,9 @@
 											<h6>Tampa, FL 33606</h6>
 											<p style="margin-top:1em;">
 												<a href='<?php the_field('facebook_link', 'option'); ?>'>
-													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb-white.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg'"></a>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg'"></a>
 												<a href='<?php the_field('twitter_link', 'option'); ?>'>
-													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw-white.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg'"></a>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg'"></a>
 											</p>
 										</div>
 									</div>
