@@ -439,6 +439,7 @@ a:hover { color:#d95221; }
   margin-bottom:1rem;
 }
 .orange-white-button:hover { background-color:#ff7340; }
+#filter-studies, #filter-case-studies { margin-bottom:2rem; }
 
 /* HEADER */
 /*.header, .header h2 { color:#fff; }
@@ -460,7 +461,12 @@ a:hover { color:#d95221; }
   -webkit-box-shadow:0 7px 0 #ff7340, 0 14px 0 #ff7340; 
 }
 #inline-search input { border-radius:25px; height:28px; margin:2px 5px; border:1px solid #4473b9; text-align:center; width:8em; display:inline-block; }
-#inline-search input::-webkit-input-placeholder, #inline-search input::placeholder { font-size:12px; font-weight:600; transform:translate3d(0,-2px,0); }
+#inline-search input::-webkit-input-placeholder, #inline-search input::placeholder { font-size:12px; font-weight:600; transform:translate3d(0,-2px,0); -webkit-transform:translate3d(0,-2px,0); }
+
+/* #inline-search input::placeholder, 
+#inline-search input:-ms-input-placeholder, 
+#inline-search input::-ms-input-placeholder, 
+#inline-search input::-webkit-input-placeholder { font-size:12px; font-weight:600; transform:translate3d(0,-2px,0); -webkit-transform:translate3d(0,-2px,0); } */
 .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg');}
 .front-header-cta { 
   background-image:url('../images/mrg-img-hdr-home-desk.jpg'); 
@@ -473,7 +479,7 @@ a:hover { color:#d95221; }
   position:relative;
   float:left;
   top:-16px;
-  margin-left:50%;
+  margin-left:calc(50% - 13px);
 }
 .front-header-blue-cta {
   background-color:rgba(31, 73, 165, 0.9); 
@@ -752,7 +758,7 @@ a:hover { color:#d95221; }
 
 /* 0 - 640 px */
 @media only screen {
-  .home .header .header-logo { max-width:130%; }
+  .white-tp-bgnd .header-logo { max-width:130%; }
   .front-page-header { background-image:url('../images/mrg-img-hdr-hero-mob.jpg'); }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }
@@ -784,7 +790,7 @@ a:hover { color:#d95221; }
 
 /* 640 - 1024 px */
 @media only screen and (min-width: 40.063em){
-  .home .header .header-logo { max-width:100%; }
+  .white-tp-bgnd .header-logo { max-width:100%; }
   .front-page-header { background-image:url('../images/mrg-img-hdr-hero-desk.jpg'); }
   .blog-section { background-image: url('../images/mrg-img-pat-blog-bg-desk.jpg'); }
   .cta-section { background-image: url('../images/mrg-img-pat-form-bg-desk.jpg'); }

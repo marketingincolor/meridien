@@ -14,7 +14,7 @@
 			</div>
 			<div class="top-bar-right nav-drop float-right show-for-small-only">
 				<ul class="menu">
-					<li><a class="orange" data-toggle="off-canvas" style="font-size:2em;"><i class="far fa-times"></i></a></li>
+					<li><a class="orange" data-toggle="off-canvas" style="font-size:2em; padding:0;"><i class="far fa-times"></i></a></li>
 					<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 				</ul>
 			</div>

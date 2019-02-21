@@ -38,17 +38,11 @@
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 							
-
 <?php if( is_front_page() ) { ?> 
-<!-- <div class="new-front-page-header new-header-cta" style="background-color:red; width:100%; position:absolute;">
-	<div class="new-header-cta-msg" style="background-color:blue; width:50%;">
-		<p>NEW <br><br><br><br><br><br><br><br><br><br>CTA<br><br><br><br><br><br><br><br><br><br>HEADER<p><br clear="both">
-	</div>
-</div> -->
 <div class="grid-container full front-header-cta">
 <?php } ?>	
 
-	<header class="header white-tp-bgnd<?php //if( is_front_page() ){ echo ' show-for-small-only'; } ?>" role="banner" id="site-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
+	<header class="header white-tp-bgnd<?php //if( is_front_page() ){ echo ' show-for-small-only'; } ?>" role="banner" id="site-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-sticky-on="small">
 				
 		 <!-- This navs will be applied to the topbar, above all content 
 			  To see additional nav styles, visit the /parts directory -->
