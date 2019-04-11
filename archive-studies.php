@@ -126,6 +126,18 @@ get_header(); ?>
 				</div>
 
 			</main> <!-- end #main -->
+
+			<div class="page-navigation">
+				<?php
+				the_posts_pagination( array(
+					'screen_reader_text' => ' ',
+					'mid_size'  => 2,
+					'prev_text' => __( 'Previous', 'textdomain' ),
+					'next_text' => __( 'Next', 'textdomain' ),
+				) ); ?>
+
+			</div>
+
 	    </div> <!-- end #inner-content -->
 	</div> <!-- end #content -->
 

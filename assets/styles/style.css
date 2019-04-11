@@ -534,6 +534,7 @@ a:hover { color:#d95221; }
 .page-navigation .pagination {}
 .page-navigation .pagination a:hover { background:none; }
 .page-navigation .pagination .current { background:none; color:inherit; }
+.page-navigation .pagination .page-numbers { float:left; }
 
 #menu-search .dropdown-pane { background-color:#1f49a5 !important; border:none; }
 #menu-search .dropdown-pane .drop-search input, .drop-search input { border-radius:25px; height:32px; }

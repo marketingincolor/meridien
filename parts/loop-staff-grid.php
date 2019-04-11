@@ -11,7 +11,7 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class('staff-grid-item'); ?> role="article">
 			
 				<section class="featured-image" itemprop="text">
-					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">

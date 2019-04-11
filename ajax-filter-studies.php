@@ -35,6 +35,7 @@
     'post_type'      => 'studies',
     'posts_per_page' => -1,
     'tax_query' => array(
+    	'relation' => 'AND',
   		array(
   			'taxonomy' => 'study_location',
   			'field'    => 'slug',

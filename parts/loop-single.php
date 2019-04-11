@@ -12,7 +12,7 @@
 		<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
 
 		<?php if(is_singular('case_studies') ){ ?>
-			<div class="grid-x grid-padding-x small-up-2 medium-up-4">
+			<div class="grid-x grid-padding-x small-up-2 medium-up-4" style="margin:20px;">
 				<div class="cell text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-enroll.svg" class="study-logo">
 		    		<p class="no-mar">Enrollment Goal:</p>
