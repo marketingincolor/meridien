@@ -117,27 +117,14 @@ get_header(); ?>
 
 
 				<?php endwhile; ?>	
-					<?php //joints_page_navi(); ?>
+					<div class="small-12"><?php joints_page_navi(); ?></div>
 				<?php else : ?>		
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 				<?php endif; ?>
 		
 
 				</div>
-
 			</main> <!-- end #main -->
-
-			<div class="page-navigation">
-				<?php
-				the_posts_pagination( array(
-					'screen_reader_text' => ' ',
-					'mid_size'  => 2,
-					'prev_text' => __( 'Previous', 'textdomain' ),
-					'next_text' => __( 'Next', 'textdomain' ),
-				) ); ?>
-
-			</div>
-
 	    </div> <!-- end #inner-content -->
 	</div> <!-- end #content -->
 

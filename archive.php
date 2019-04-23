@@ -11,7 +11,7 @@ if (strpos($url, 'patient') !== false) {
   $archive_label = 'Blog Posts';
 }else if (strpos($url, 'sponsor-cro') !== false) {
   $archive_title = 'CRO Blog';//get_field('study_section_title', 'option');
-  $archive_content = 'Stay up to date with our current posts for Sponsors / CROs';//get_field('study_section_content', 'option');
+  $archive_content = 'Stay dialed in to currrent issues';//get_field('study_section_content', 'option');
   $archive_label = 'Blog Posts';
 } else if (strpos($url, 'news') !== false) {
   $archive_title = 'News Posts';//get_field('study_section_title', 'option');

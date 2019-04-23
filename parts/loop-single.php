@@ -20,12 +20,12 @@
 				</div>
 				<div class="cell text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-actual.svg" class="study-logo">
-					<p class="no-mar">Actually Enrolled:</p>
+					<p class="no-mar">Actual Enrollment:</p>
 					<h5><?php the_field('actually_enrolled'); ?></h5>
 				</div>
 				<div class="cell text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-random.svg" class="study-logo">
-					<p class="no-mar">Randomized:</p>
+					<p class="no-mar">Goal Achieved:</p>
 					<h5><?php the_field('randomized'); ?>%</h5>
 				</div>
 				<div class="cell text-center">

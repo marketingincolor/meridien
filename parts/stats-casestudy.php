@@ -58,13 +58,13 @@ $retention_rate_avg    = $retention_rate_sum / count($retention_rate);
 
 		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-actual.svg" class="study-logo">
-		    	<p class="no-mar">Actually Enrolled:</p>
+		    	<p class="no-mar">Actual Enrollment:</p>
 		    	<h5 class="alt-blue"><?php echo floor($actually_enrolled_avg); ?></h5>
 			</div>
 
 		    <div class="small-12 medium-3 text-center cell">
 		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-study-icon-random.svg" class="study-logo">
-		    	<p class="no-mar">Randomized:</p>
+		    	<p class="no-mar">Goal Achived:</p>
 		    	<h5 class="alt-blue"><?php echo floor($randomized_avg); ?>%</h5>
 			</div>
 

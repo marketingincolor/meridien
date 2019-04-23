@@ -530,7 +530,7 @@ a:hover { color:#d95221; }
 .is-dropdown-submenu { background-color:rgba(255,255,255,0.9) !important; border:none; }
 .sticky-container { /*background-color:rgba(255,255,255,0.9);*/ z-index:10; }
 
-.page-navigation { text-align:right; }
+.page-navigation { /*text-align:right;*/ }
 .page-navigation .pagination {}
 .page-navigation .pagination a:hover { background:none; }
 .page-navigation .pagination .current { background:none; color:inherit; }
@@ -596,6 +596,7 @@ a:hover { color:#d95221; }
 
 .archive .type-studies { text-align:center; }
 .archive .type-studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:10px; width:100%; }
+.archive .type-studies .entry-content { margin-bottom:1em; }
 .archive .entry-content .entry-content-meta h6 { font-size:14px; font-weight:600; }
 
 .archive .archive-grid { margin-top:6em; }

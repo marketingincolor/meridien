@@ -274,23 +274,28 @@ get_header(); ?>
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 			    <div class="small-12 medium-10 medium-offset-1 text-center cell">
 			    	<h3>Our Services</h3>
-			    	<p>With six dedicated research sites strategically located throughout central Florida, Meridien Research can help get you to your recruitment goals.</p>
+			    	<p>With six research-dedicated research sites strategically located throughout central Florida, let Meridien Research help you meet your study goals.</p>
 			    	<p>Meridien Research investigators are board certified and specialists in:</p>
 			    	<div class="grid-x">
 			    		<div class="small-6 cell">
 						<ul class="services-list">
 							<li>Endocrinology</li>
-							<li>Mental Health</li>
+							<li>Psychiatry</li>
 							<li>Dermatology</li>
-							<li>Men’s Health</li>
+							<!-- <li>Men’s Health</li> -->
+							<li>Family Practice</li>
+							<li>Gastroenterology</li>
+							<li>Urology</li>
 						</ul>
 						</div>
 						<div class="small-6 cell">
 						<ul class="services-list">
 							<li>Cardiology</li>
-							<li>CNS</li>
+							<li>Neurology</li>
 							<li>Internal Medicine</li>
-							<li>Women’s Health</li>
+							<!-- <li>Women’s Health</li> -->
+							<li>Gynecology</li>
+							<li>Pulmonology</li>
 						</ul>
 						</div>
 					</div>
