@@ -15,13 +15,12 @@
 				</section> <!-- end article section -->
 			
 				<header class="article-header">
-					<h4 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>	
-			
+					<h4 class="title" style="padding-bottom:0; margin-bottom:0;"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>	
+				<?php $staff_title = get_field('staff_title'); 
+					if ($staff_title) { ?> 
+					<h4 class="title" style="padding:0; font-weight:600; font-size:1rem;"><?php echo $staff_title; ?></h4>
+				<?php } ?>
 				</header> <!-- end article header -->	
-								
-				<section class="entry-content" itemprop="text">
-					<?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?> 
-				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->
 			

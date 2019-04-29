@@ -51,6 +51,10 @@
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->
 					
+	<?php if(is_singular('staff') ) { 
+		$staff_title = get_field('staff_title'); ?>
+	<h4 class="header-text"><?php echo $staff_title; ?></h4>
+	<?php } ?>
     <section class="entry-content" itemprop="text">
 		<?php the_content(); ?>
 	</section> <!-- end article section -->

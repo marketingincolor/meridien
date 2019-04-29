@@ -72,7 +72,7 @@ get_header(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">			
 						
 						<header class="article-header">
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('small'); ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							<h5 class="text"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
 						</header> <!-- end article header -->
 										
