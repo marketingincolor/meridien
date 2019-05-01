@@ -46,6 +46,10 @@
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-fb.svg'"></a>
 												<a href='<?php the_field('twitter_link', 'option'); ?>'>
 													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-tw.svg'"></a>
+												<a href='<?php the_field('linkedin_link', 'option'); ?>'>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-li.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-li-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-li.svg'"></a>
+												<a href='<?php the_field('instagram_link', 'option'); ?>'>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-ig.svg" class="social-logo" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-ig-alt.svg'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/assets/images/mrg-footer-ico-ig.svg'"></a>
 											</p>
 										</div>
 									</div>

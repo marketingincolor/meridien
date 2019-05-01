@@ -40,7 +40,7 @@ get_header(); ?>
 					</div>
 					<div class="cell medium-6 medium-offset-3 text-center">
 						<!-- form here -->
-						<label>Indications
+						<label><!-- Indications -->
 							<select class="" name="indications" id="indications-select" multiple>
 								<option value="all" selected>All <?php echo $archive_label; ?></option>
 
