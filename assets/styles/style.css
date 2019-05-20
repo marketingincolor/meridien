@@ -359,9 +359,9 @@ MERIDIEN SITE CUSTOMIZATIONS
 /*
 Montserrat font weights: 200-Extra-light, 300-light, 400-Regular, 500-Medium, 600-Semi-Bold, 700-Bold
  */
-body { color:#48484d; font-weight:500; }
+body { color:#333; font-weight:500; }
 body, h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-weight:700; color:#75757d; }
+h1, h2, h3, h4, h5, h6 { font-weight:700; color:#1f49a5; }
 a { color:inherit; }
 a:focus { color:inherit; }
 a:hover { color:#d95221; }
@@ -372,8 +372,8 @@ a:hover { color:#d95221; }
 .alt-blue { color:#2e78e5; }
 .orange { color:#ff7340; }
 .dk-orange { color:#d95221; }
-.header-text { color:#75757d; }
-.text { color:#48484d; }
+.header-text { color:#1f49a5; }
+.text { color:#333; }
 .blue-bgnd { background-color:#1f49a5; }
 .white-tp-bgnd { background-color:rgba(255,255,255,0.9); }
 .orange-bgnd { background-color:#ff7340; }
@@ -450,7 +450,7 @@ a:hover { color:#d95221; }
 .top-bar { padding:3em .5em; }
 .min-padding-header { padding:1em .5em; }
 .top-bar ul { background:transparent; }
-.top-bar .header-logo { /*width:160px;*/ width:244px; }
+.top-bar .header-logo { /*width:160px;*/ width:284px; }
 .home .header .header-logo { /*max-width:80%; margin-bottom:45px;*/ }
 .top-bar-left.nav-logo, .top-bar-right.nav-drop { /* width:49% !important; */width:30% !important; flex:inherit !important; }
 .top-bar-right.nav-drop .menu {  float:right; }
@@ -521,7 +521,7 @@ a:hover { color:#d95221; }
 
 .position-right.is-transition-push { box-shadow:none; -webkit-box-shadow:none;  }
 .home #main-nav { text-align:center; }
-.home #main-nav li, .top-bar li { text-transform:uppercase; font-size:12px; font-weight:700; letter-spacing:1px; }
+.home #main-nav li, .top-bar li { text-transform:uppercase; font-size:14px; font-weight:700; letter-spacing:1px; }
 .menu .active >a { background:transparent; color:#d95221; }
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after { border-color:#ff7340 transparent transparent; }
 .dropdown.menu .is-active>a { color:#d95221; }
