@@ -56,8 +56,8 @@
 		<div class="grid-container full">
 			<div class="grid-x grid-margin-x">
 				<div class="cell show-for-large large-5 front-header-blue-cta">
-					<h1>Medical Research Close to Home!</h1>
-					<p>Meridien Research provides people of all ages with the opportunity to participate in medical research studies for medical and mental health conditions.</p>
+					<h1><?php the_field('hero_title'); ?></h1>
+					<?php the_field('hero_caption'); ?>
 				</div>
 				<div class="cell show-for-large large-7"></div>
 				<div class="cell hide-for-large small-12" style="padding:12em;"></div>
@@ -69,8 +69,8 @@
 </div>
 
 <div class="cell hide-for-large small-12 front-header-blue-cta" style="padding:2em !important; background-color:rgba(31, 73, 165, 1) !important; text-align:center;">
-	<h1>Medical Research Close to Home!</h1>
-	<p>Meridien Research provides people of all ages with the opportunity to participate in medical research studies for medical and mental health conditions.</p>
+	<h1><?php the_field('hero_title'); ?></h1>
+	<?php the_field('hero_caption'); ?>
 </div>
 <aside class="orange-line"></aside>
 <a href="#top-ref" class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/sm-scroll-btn.svg" class="anchor-button"></a>

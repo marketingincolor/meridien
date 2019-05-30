@@ -595,17 +595,21 @@ a:hover { color:#d95221; }
 .page-grid article .featured-image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
 
 .archive .type-studies { text-align:center; }
-.archive .type-studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:10px; width:100%; }
+.archive .type-studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
 .archive .type-studies .entry-content { margin-bottom:1em; }
 
 .archive .type-case_studies { text-align:center; }
-.archive .type-case_studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:10px; width:100%; }
+.archive .type-case_studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
 .archive .type-case_studies .entry-content { margin-bottom:1em; }
 
 .archive .entry-content .entry-content-meta h6 { font-size:14px; font-weight:600; }
 
+.archive .archive-grid.archive-staff { margin-top:6em; }
+.archive .archive-grid.archive-staff article .featured-image img { min-width:200px; border-radius:10px; width:100%; }
+.archive .archive-grid.archive-staff article .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
+
 .archive .archive-grid { margin-top:6em; }
-.archive .archive-grid article .featured-image img { min-width:200px; border-radius:10px; width:100%; }
+.archive .archive-grid article .featured-image img { min-width:200px; border-radius:250px; width:100%; }
 .archive .archive-grid article .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
 
 .blog-grid-item { display:inline-grid; text-align: center; }
@@ -725,6 +729,20 @@ a:hover { color:#d95221; }
 
 }
 
+.social-sharing a { font-size:12px; }
+a.button-facebook, a.button-twitter, a.button-linkedin, a.button-pinterest, a.button-xing, a.button-reddit {
+color: #fff;
+text-decoration: none;
+font-size: 12px;
+font-weight: bold;
+margin: 4% 1% 4% 0;
+padding: 5px 1%;
+padding: .5rem 1%;
+text-align: center;
+display: inline-block;
+text-shadow: 0 0px 0 rgba(0, 0, 0, 0.25);
+border: 0px;
+}
 
 /* FOOTER */
 .footer { margin-top:0em; }

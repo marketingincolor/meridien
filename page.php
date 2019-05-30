@@ -145,7 +145,7 @@ get_header(); ?>
 	<div class="content grid-container show-for-medium">
 		<div class="row patient-router grid-x grid-margin-x grid-padding-x text-center">
 			<div class="show-for-medium medium-6 cell has-bar">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon.svg" class="cta-icon">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-benefits-icon.svg" class="cta-icon">
 				<h4 class="header-text">Patient/Volunteer Homepage</h4>
 				<a href="<?php echo site_url(); ?>/patients" class="orange-button">Visit</a>
 			</div>
@@ -160,7 +160,7 @@ get_header(); ?>
 	<div class="content">
 		<div class="row patient-router-alt grid-x text-center">
 			<div class="show-for-small-only cell dk-orange-bgnd cta-mobile">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-patient-icon-mobile.svg" class="cta-icon">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-img-benefits-icon-mobile.svg" class="cta-icon">
 				<a href="<?php echo site_url(); ?>/patients" class="white-button" style="font-weight:600;">Visit Patient Homepage</a>
 			</div>
 			<div class="show-for-small-only cell orange-bgnd cta-mobile">

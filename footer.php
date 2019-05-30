@@ -37,9 +37,9 @@
 										<div class="small-12 medium-4 cell">
 											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mrg-logo-color.svg" class="footer-logo">
 											<h6 class="no-mar">Meridien Research Corporate</h6>
-											<h6 class="no-mar">501 S. Boulevard</h6>
-											<h6 class="no-mar">Tampa, FL 33606</h6>
-											<h6 class="show-for-medium">813-563-6009</h6>
+											<h6 class="no-mar">1201 S. Orlando Avenue, Suite #362</h6>
+											<h6 class="no-mar">Winter Park, FL 32789</h6>
+											<h6 class="show-for-medium">813-540-6000</h6>
 											<h6 class="show-for-small-only"><a href="tel:813-563-6009" style="text-decoration:underline;">813-563-6009</a></h6>
 											<p style="margin-top:1em;">
 												<a href='<?php the_field('facebook_link', 'option'); ?>'>

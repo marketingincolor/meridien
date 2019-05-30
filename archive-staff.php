@@ -19,7 +19,7 @@ get_header(); ?>
 					</div>
 				</div>	
 
-				<div class="grid-x grid-margin-x archive-grid" data-equalizer>
+				<div class="grid-x grid-margin-x archive-grid archive-staff" data-equalizer>
 		
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
