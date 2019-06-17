@@ -17,6 +17,10 @@ POSTS & CONTENT STYLES
   max-width: 100%;
   height: auto; }
 
+.entry-content a {
+  color:#ff7340;
+}
+
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
@@ -595,11 +599,11 @@ a:hover { color:#d95221; }
 .page-grid article .featured-image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
 
 .archive .type-studies { text-align:center; }
-.archive .type-studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
+.archive .type-studies .article-header img { min-width:120px; max-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
 .archive .type-studies .entry-content { margin-bottom:1em; }
 
 .archive .type-case_studies { text-align:center; }
-.archive .type-case_studies .article-header img { min-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
+.archive .type-case_studies .article-header img { min-width:120px; max-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
 .archive .type-case_studies .entry-content { margin-bottom:1em; }
 
 .archive .entry-content .entry-content-meta h6 { font-size:14px; font-weight:600; }
@@ -609,7 +613,7 @@ a:hover { color:#d95221; }
 .archive .archive-grid.archive-staff article .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
 
 .archive .archive-grid { margin-top:6em; }
-.archive .archive-grid article .featured-image img { min-width:200px; border-radius:250px; width:100%; }
+.archive .archive-grid article .featured-image img { min-width:120px; max-width:200px; border-radius:250px; width:100%; }
 .archive .archive-grid article .article-header .title { font-size:18px; font-weight:700; line-height:1.4; padding:0.75em 0em;  }
 
 .blog-grid-item { display:inline-grid; text-align: center; }
@@ -811,6 +815,7 @@ border: 0px;
   #menu-footer-links-two li:last-child, 
   #menu-footer-links li:last-child { /*border-bottom:1px solid #48484d;*/ padding-bottom:1em; margin-bottom:2em; }
   #ref-link { font-size:48px; }
+  .services-section .services-list li { font-size:.75em; }
 }
 
 /* 640 - 1024 px */
@@ -846,6 +851,7 @@ border: 0px;
   #menu-footer-links-two li:last-child, 
   #menu-footer-links li:last-child { border-bottom:none; padding-bottom:none; margin-bottom:none; }
   #ref-link { font-size:16px; }
+  .services-section .services-list li { font-size:1em; }
 }
 /* 1024 - 1440 px */
 @media only screen and (min-width: 63.063em){

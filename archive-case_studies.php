@@ -83,7 +83,7 @@ get_header(); ?>
 									<h6 class="no-mar">Enrollment Goal: <?php echo $enrollment_goal; ?></h6>
 								</div>
 								<div class="small-12 cell">
-									<h6 class="no-mar">Actual Enrollement: <?php echo $actually_enrolled; ?></h6>
+									<h6 class="no-mar">Actual Enrollment: <?php echo $actually_enrolled; ?></h6>
 								</div>
 								<div class="small-12 cell">
 									<h6 class="no-mar">Goal Achieved: <?php echo $randomized; ?></h6>

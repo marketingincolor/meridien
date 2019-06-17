@@ -156,38 +156,42 @@ function wordpress_breadcrumbs() {
   }
 }
 
+/**
+ * Display Locations taxonomy dropdown in admin for Studies CPT
+ * 
+ */
+add_action('restrict_manage_posts', 'custom_filter_post_type_by_taxonomy');
+function custom_filter_post_type_by_taxonomy() {
+  global $typenow;
+  $post_type = 'studies';
+  $taxonomy  = 'study_location';
+  if ($typenow == $post_type) {
+    $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+    $info_taxonomy = get_taxonomy($taxonomy);
+    wp_dropdown_categories(array(
+      'show_option_all' => __("Show All {$info_taxonomy->label}"),
+      'taxonomy'        => $taxonomy,
+      'name'            => $taxonomy,
+      'orderby'         => 'name',
+      'selected'        => $selected,
+      'show_count'      => true,
+      'hide_empty'      => true,
+    ));
+  };
+}
 
-
-
-
-
-
-
-
-
-
-//THIS IS A NON-WORKING EXAMPLE FROM https://www.advancedcustomfields.com/resources/creating-wp-archive-custom-field-filter/
-//
-//add_action('pre_get_posts', 'my_pre_get_posts', 10, 1);
-function my_pre_get_posts( $query )
-{
-  if( is_admin() ) 
-  {
-    return;
+/**
+ * Filter Studies custom posts by Location taxonomy
+ * 
+ */
+add_filter('parse_query', 'custom_convert_id_to_term_in_query');
+function custom_convert_id_to_term_in_query($query) {
+  global $pagenow;
+  $post_type = 'studies';
+  $taxonomy  = 'study_location';
+  $q_vars    = &$query->query_vars;
+  if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
+    $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+    $q_vars[$taxonomy] = $term->slug;
   }
-
-  $meta_query = $query->get('meta_query');
-
-  if ( isset($_GET['indications']) ) 
-  {
-    $meta_query = array(
-      'key' => 'indications',
-      'value' => $_GET['indications'],
-      'compare' => '=',
-    );
-  }
-  $query->set('meta_query', $meta_query);
-  return;
-} 
-
-
+}
