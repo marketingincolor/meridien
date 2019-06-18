@@ -525,7 +525,7 @@ a:hover { color:#d95221; }
 
 .position-right.is-transition-push { box-shadow:none; -webkit-box-shadow:none;  }
 .home #main-nav { text-align:center; }
-.home #main-nav li, .top-bar li { text-transform:uppercase; font-size:14px; font-weight:700; letter-spacing:1px; }
+.home #main-nav li, .top-bar li { text-transform:uppercase; font-size:14px; font-weight:700; letter-spacing:1px; text-align:left; }
 .menu .active >a { background:transparent; color:#d95221; }
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after { border-color:#ff7340 transparent transparent; }
 .dropdown.menu .is-active>a { color:#d95221; }
