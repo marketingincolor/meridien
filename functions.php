@@ -195,3 +195,16 @@ function custom_convert_id_to_term_in_query($query) {
     $q_vars[$taxonomy] = $term->slug;
   }
 }
+
+// define the ninja_forms_render_default_value callback 
+function filter_ninja_forms_render_default_value( $default_value, $field_type, $settings ) { 
+    global $post; 
+    if ( $settings['key'] == 'hidden_1560978748959' ) {
+      $findwhere = $post->ID;
+      $locationvar = get_field('location', $findwhere); 
+      $default_value = $locationvar->post_title;
+    }
+    return $default_value; 
+}; 
+// add the filter 
+add_filter( 'ninja_forms_render_default_value', 'filter_ninja_forms_render_default_value', 10, 3 ); 
