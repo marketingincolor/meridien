@@ -598,6 +598,9 @@ a:hover { color:#d95221; }
 
 .page-grid article .featured-image img { min-width:200px;/*min-height:120px;*/ border-radius:10px; }
 
+.tax-indications article { text-align:center; }
+.tax-indications article .article-header img { min-width:120px; max-width:200px; border-radius:250px; width:100%; }
+
 .archive .type-studies { text-align:center; }
 .archive .type-studies .article-header img { min-width:120px; max-width:200px;/*min-height:120px;*/ border-radius:250px; width:100%; }
 .archive .type-studies .entry-content { margin-bottom:1em; }
